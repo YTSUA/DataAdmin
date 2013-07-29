@@ -55,9 +55,8 @@
     <ApplicationIcon>icon_01.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DataAdminCommonLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>.\DataAdminCommonLib.dll</HintPath>
+    <Reference Include="DataAdminCommonLib">
+      <HintPath>E:\DataAdmin(CLIENT-SERVER)\DataAdminCommonLib\DataAdminCommonLib\bin\Debug\DataAdminCommonLib.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=11.3.0.4, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -94,6 +93,7 @@
   <ItemGroup>
     <Compile Include="DataAdminService\DataAdminService.cs" />
     <Compile Include="DataAdminService\DataClient.cs" />
+    <Compile Include="DataNetLogger\DataNetLogService.cs" />
     <Compile Include="DbDataManager\DataManager.cs" />
     <Compile Include="DbDataManager\Structs\GroupModel.cs" />
     <Compile Include="DbDataManager\Structs\LogModel.cs" />
@@ -242,7 +242,6 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
