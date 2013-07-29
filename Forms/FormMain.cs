@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAdmin.DataAdminServices;
+using DataAdmin.DataNetLogger;
 using DataAdmin.DbDataManager;
 using DataAdmin.DbDataManager.Structs;
 using DataAdmin.Properties;
@@ -108,7 +109,7 @@ namespace DataAdmin.Forms
         {
             if (_server != null)
             {
-                _adminservice.listChanged -= RefreshClientList;
+                _adminService.listChanged -= RefreshClientList;
                 _server.Stop();
 
             }
@@ -152,11 +153,11 @@ namespace DataAdmin.Forms
         #endregion
 
         #region DATA ADMIN SERVICE VARIABLES
-        private DataAdminService _adminservice;
+        private DataAdminService _adminService;
+        private DataNetLogService _logService;
         private IScsServiceApplication _server;
         #endregion
-
-        #region UI Code
+      
 
         #region UI + SERVER
         /// <summary>
@@ -166,28 +167,126 @@ namespace DataAdmin.Forms
         {
             _startControl.IsOpen = false;
 
-    
+
 
             _server = ScsServiceBuilder.CreateService(new ScsTcpEndPoint(10048));
-            _adminservice = new DataAdminService();
+            _adminService = new DataAdminService();
             //Add Phone Book Service to service application
-            _adminservice.listChanged += RefreshClientList;
-            _server.AddService<IDataAdminService, DataAdminService>(_adminservice);
+            _adminService.listChanged += RefreshClientList;
+            _adminService.loggedInLog += ClientLoggedLog;
+            _adminService.loginFailedLog += ClientFailedLoginLog;
+            _logService = new DataNetLogService();
+            _logService.abortedOperation += AbortedOperationLog;
+            _logService.finishedOperation += FinishedOperationLog;
+            _logService.startedOperation += StartedOperationLog;
+            _logService.simpleMessage += SimpleMessageLog;
+
+            _server.AddService<IDataAdminService, DataAdminService>(_adminService);
+            _server.AddService<IDataNetLogService, DataNetLogService>(_logService);
 
             _server.ClientConnected += server_ClientConnected;
             _server.ClientDisconnected += server_ClientDisconnected;
             //Start server
             _server.Start();
 
-          
+
             UpdateAllTables();
         }
+
+        private void ClientFailedLoginLog(MessageFactory.LogMessage msg, string msgMain)
+        {
+            Invoke((Action)delegate
+            {
+                uiLastMessages.Items.Add(msgMain);
+
+            });
+        }
+
+        private void ClientLoggedLog(MessageFactory.LogMessage msg, string msgMain)
+        {
+            //todo save this log into DB
+            uiLastMessages.Items.Add(msgMain);
+            var logmodel = new LogModel
+                               {
+                                   Date = msg.Time,
+                                   Group = msg.Group,
+                                   UserId = msg.UserID,
+                                   MsgType = Convert.ToInt32(msg.LogType),
+                                   Status = Convert.ToInt32(msg.OperationStatus),
+                                   Symbol = msg.Symbol
+                               };
+
+            DataManager.AddNewLog(logmodel);
+        }
+
+        private void SimpleMessageLog(object sender, MessageFactory.LogMessage msg)
+        {
+            
+            var logmodel = new LogModel
+            {
+                Date = msg.Time,
+                Group = msg.Group,
+                UserId = msg.UserID,
+                MsgType = Convert.ToInt32(msg.LogType),
+                Status = Convert.ToInt32(msg.OperationStatus),
+                Symbol = msg.Symbol
+            };
+
+            DataManager.AddNewLog(logmodel);
+        }
+
+        private void StartedOperationLog(object sender, MessageFactory.LogMessage msg)
+        {
+          
+            var logmodel = new LogModel
+            {
+                Date = msg.Time,
+                Group = msg.Group,
+                UserId = msg.UserID,
+                MsgType = Convert.ToInt32(msg.LogType),
+                Status = Convert.ToInt32(msg.OperationStatus),
+                Symbol = msg.Symbol
+            };
+
+            DataManager.AddNewLog(logmodel);
+        }
+
+        private void FinishedOperationLog(object sender, MessageFactory.LogMessage msg)
+        {
+            var logmodel = new LogModel
+            {
+                Date = msg.Time,
+                Group = msg.Group,
+                UserId = msg.UserID,
+                MsgType = Convert.ToInt32(msg.LogType),
+                Status = Convert.ToInt32(msg.OperationStatus),
+                Symbol = msg.Symbol
+            };
+
+            DataManager.AddNewLog(logmodel);
+        }
+
+        private void AbortedOperationLog(object sender, MessageFactory.LogMessage msg)
+        {
+            var logmodel = new LogModel
+            {
+                Date = msg.Time,
+                Group = msg.Group,
+                UserId = msg.UserID,
+                MsgType = Convert.ToInt32(msg.LogType),
+                Status = Convert.ToInt32(msg.OperationStatus),
+                Symbol = msg.Symbol
+            };
+
+            DataManager.AddNewLog(logmodel);
+        }
+
         private void RefreshClientList()
         {
             Invoke((MethodInvoker)delegate
             {
-                if (_adminservice.OnlineClients == null) return;
-                var listClients = _adminservice.OnlineClients;
+                if (_adminService.OnlineClients == null) return;
+                var listClients = _adminService.OnlineClients;
                 if (uiWhoIsOnline == null) return;
                 uiWhoIsOnline.Items.Clear();
                 foreach (var user in listClients.GetAllItems())
@@ -203,7 +302,7 @@ namespace DataAdmin.Forms
             Invoke((MethodInvoker)delegate
             {
 
-                var listClients = _adminservice.OnlineClients;
+                var listClients = _adminService.OnlineClients;
                 uiWhoIsOnline.Items.Clear();
                 foreach (var user in listClients.GetAllItems())
                 {
@@ -214,25 +313,11 @@ namespace DataAdmin.Forms
 
         private void server_ClientConnected(object sender, ServiceClientEventArgs e)
         {
-            Invoke((MethodInvoker)delegate
-            {
-                uiLastMessages.Items.Add("Client " + e.Client.ClientId.ToString() + " connected from address " + e.Client.RemoteEndPoint);
-
-
-            });
-
+           
 
         }
 
-
-        /// <summary>
-        /// Stop the DataAdmin server
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-
-
-        #endregion
+        
 
 
         #region JUST UI
@@ -391,6 +476,7 @@ namespace DataAdmin.Forms
                         if (!_symbols.Exists(a => a.SymbolName == symbol))
                         {
                             DataManager.AddNewSymbol(symbol);
+                            _adminService.SymbolListChanged();
                             UpdateSymbolsTable();
                         }
                         else
@@ -422,6 +508,8 @@ namespace DataAdmin.Forms
                         if (!_symbols.Exists(a => a.SymbolName == symbol))
                         {
                             DataManager.EditSymbol(oldName, symbol);
+                            _adminService.SymbolListChanged();
+
                             UpdateSymbolsTable();
                         }
                         else
@@ -443,6 +531,8 @@ namespace DataAdmin.Forms
                     foreach (object item in ui_symbols_listBox_symbols.SelectedItems)
                     {
                         DataManager.DeleteSymbol(item.ToString());
+                        _adminService.SymbolListChanged();
+
                     }
                     UpdateSymbolsTable();
                 }
@@ -518,8 +608,8 @@ namespace DataAdmin.Forms
                 DataManager.EditUser(userId, userModel);
                 UpdateUsersTable();
                 CloseEditUserControl();
-                if(_adminservice.OnlineClients.GetAllItems().Exists(a => a.UserName == userModel.Name))
-                _adminservice.ChangePrivilege(userModel.Name, new MessageFactory.ChangePrivilage(userModel.AllowDataNet,
+                if(_adminService.OnlineClients.GetAllItems().Exists(a => a.UserName == userModel.Name))
+                _adminService.ChangePrivilege(userModel.Name, new MessageFactory.ChangePrivilage(userModel.AllowDataNet,
                 userModel.AllowTickNet, userModel.AllowRemoteDb, userModel.AllowLocalDb, userModel.AllowAnyIp, userModel.AllowMissBars, userModel.AllowCollectFrCqg));
             
             }
@@ -610,7 +700,7 @@ namespace DataAdmin.Forms
                         DataManager.DeleteUser(userId);
 
 
-                        _adminservice.DeletedUser(username);//send to client request to logging out
+                        _adminService.DeletedUser(username);//send to client request to logging out
                     }
                     UpdateUsersTable();
                 }
@@ -706,6 +796,8 @@ namespace DataAdmin.Forms
                             DataManager.AddSymbolIntoGroup(groupId, symbol);
                         }
                     }
+                    _adminService.GroupChanged();
+
                     CloseAddListControl();
                 }
             }
@@ -781,7 +873,7 @@ namespace DataAdmin.Forms
             };
 
             var oldGroupName = _editListControl.OldGroupName;
-
+            var groupName = _editListControl.textBoxXListName.Text;
             if ((!_groups.Exists(a => a.GroupName == group.GroupName) && _groups.Exists(a => a.GroupName == oldGroupName)) || (group.GroupName == oldGroupName && _groups.Exists(a => a.GroupName == oldGroupName)))
             {
                 var groupId = _groups.Find(a => a.GroupName == oldGroupName).GroupId;
@@ -809,6 +901,7 @@ namespace DataAdmin.Forms
 
                 UpdateGroupsTable();
                 CloseEditListControl();
+                _adminService.GroupChanged();
             }
             else
             {
@@ -839,6 +932,8 @@ namespace DataAdmin.Forms
                     {
                         var groupId = _groups.Find(a => a.GroupName == item.ToString()).GroupId;
                         DataManager.DeleteGroupOfSymbols(groupId);
+                        _adminService.GroupChanged();
+
                     }
                     UpdateGroupsTable();
                 }
@@ -901,7 +996,7 @@ namespace DataAdmin.Forms
             DataManager.AddGroupForUser(userId, group);
 
             Task.Factory.StartNew((Action)
-                                  (() => _adminservice.SendToClientSymbolGroupList(username)));
+                                  (() => _adminService.SendToClientSymbolGroupList(username)));
             
           
             UpdateAllowedUsersTable();
@@ -927,7 +1022,7 @@ namespace DataAdmin.Forms
                 UpdateAllowedUsersTable();
             }
             Task.Factory.StartNew((Action)
-                                  (() => _adminservice.SendToClientSymbolGroupList(userLogin)));
+                                  (() => _adminService.SendToClientSymbolGroupList(userLogin)));
                                    
                 
         }
