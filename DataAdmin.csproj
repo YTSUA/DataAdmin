@@ -55,8 +55,9 @@
     <ApplicationIcon>icon_01.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DataAdminCommonLib">
-      <HintPath>..\..\DataAdminRelease2\DataAdmin\bin\Debug\DataAdminCommonLib.dll</HintPath>
+    <Reference Include="DataAdminCommonLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\DataAdminCommonLib.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=11.3.0.4, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -74,8 +75,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\GitHub\Reversals\Reversals\bin\x64\Debug\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Scs">
-      <HintPath>..\..\DataAdminRelease2\DataAdmin\bin\Debug\Scs.dll</HintPath>
+    <Reference Include="Scs, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Scs.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
