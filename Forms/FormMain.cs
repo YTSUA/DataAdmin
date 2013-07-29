@@ -945,7 +945,7 @@ namespace DataAdmin.Forms
             var logs = DataManager.GetLogBetweenDates(dateStart, dateEnd);
             if (logs.Count > 0)
             {
-                ui_logs_dGridX_Logs.Rows.Clear();
+                //TODO: ui_logs_dGridX_Logs.Rows.Clear();
                 foreach (var log in logs)
                 {
                     var userName = _users.Find(a => a.Id == log.UserId).Name;
@@ -964,6 +964,9 @@ namespace DataAdmin.Forms
 
         #endregion
 
-
+        bool ExistTable()
+        {
+            return false?false:true;
+        }
     }
 }
