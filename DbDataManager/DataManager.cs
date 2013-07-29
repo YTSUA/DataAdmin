@@ -110,10 +110,13 @@ namespace DataAdmin.DbDataManager
                 {
                     var log = new LogModel
                     {
+                        LogId = reader.GetInt32(0),
                         UserId = reader.GetInt32(1),
-                        MsgType = reader.GetString(2),
-                        Date = reader.GetDateTime(3),
-                        Description = reader.GetString(4)
+                        Date = reader.GetDateTime(2),
+                        Symbol = reader.GetString(3),
+                        MsgType = reader.GetInt32(4),
+                        Group = reader.GetString(5),
+                        Status = reader.GetInt32(6)
                     };
 
                     resultList.Add(log);
@@ -134,12 +137,14 @@ namespace DataAdmin.DbDataManager
             string dateStr = Convert.ToDateTime(log.Date).ToString("yyyy/MM/dd HH:mm:ss", CultureInfo.InvariantCulture);
 
             String query = "INSERT IGNORE INTO " + TblLogs;
-            query += "(UserID, MsgType, Date, Description) VALUES";
+            query += "(UserID, Date, MsgType, Symbol, Group, Status) VALUES";
             query += "(";
             query += log.UserId + ",";
-            query += "'" + log.MsgType + "',";
             query += "'" + dateStr + "',";
-            query += "'" + log.Description + "');COMMIT;";
+            query += "'" + log.MsgType + "',";
+            query += "'" + log.Symbol + "',";
+            query += "'" + log.Group + "',";
+            query += "'" + log.Status + "');COMMIT;";
 
             return DoSql(query);
         }
@@ -692,9 +697,11 @@ namespace DataAdmin.DbDataManager
             const string createLogsSql = "CREATE TABLE  IF NOT EXISTS `" + TblLogs + "` ("
                                      + "`ID` INT(10) UNSIGNED  NOT NULL AUTO_INCREMENT,"
                                      + "`UserID` INT(10) NULL,"
-                                     + "`MsgType` VARCHAR(50) NULL,"
-                                     + "`Date` DateTime NULL, "
-                                     + "`Description` VARCHAR(100) NULL,"
+                                     + "`Date` DateTime NULL, "                             
+                                     + "`MsgType` INT(10) NULL,"
+                                     + "`Symbol` VARCHAR(50) NULL,"
+                                     + "`Group` VARCHAR(50) NULL,"
+                                     + "`Status` INT(10) NULL,"
                                      + "PRIMARY KEY (`ID`)"
                                      + ")"
                                      + "COLLATE='latin1_swedish_ci'"
