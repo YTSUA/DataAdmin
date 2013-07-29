@@ -797,6 +797,15 @@ namespace DataAdmin.Forms
                     }
                     _adminService.GroupChanged();
 
+                    foreach (var item in ui_symbols_listBox_sumbolsLists.Items)
+                    {
+                        if (item.ToString() == group.GroupName)
+                        {
+                            ui_symbols_listBox_sumbolsLists.SelectedItem = item;
+                            break;
+                        }
+                    }
+
                     CloseAddListControl();
                 }
             }
@@ -872,7 +881,7 @@ namespace DataAdmin.Forms
             };
 
             var oldGroupName = _editListControl.OldGroupName;
-            var groupName = _editListControl.textBoxXListName.Text;
+
             if ((!_groups.Exists(a => a.GroupName == group.GroupName) && _groups.Exists(a => a.GroupName == oldGroupName)) || (group.GroupName == oldGroupName && _groups.Exists(a => a.GroupName == oldGroupName)))
             {
                 var groupId = _groups.Find(a => a.GroupName == oldGroupName).GroupId;
@@ -899,8 +908,20 @@ namespace DataAdmin.Forms
                 }
 
                 UpdateGroupsTable();
-                CloseEditListControl();
+
+
                 _adminService.GroupChanged();
+
+                foreach (var item in ui_symbols_listBox_sumbolsLists.Items)
+                {
+                    if (item.ToString() == group.GroupName)
+                    {
+                        ui_symbols_listBox_sumbolsLists.SelectedItem = item;
+                        break;
+                    }
+                }
+
+                CloseEditListControl();
             }
             else
             {
@@ -932,9 +953,10 @@ namespace DataAdmin.Forms
                         var groupId = _groups.Find(a => a.GroupName == item.ToString()).GroupId;
                         DataManager.DeleteGroupOfSymbols(groupId);
                         _adminService.GroupChanged();
-
                     }
                     UpdateGroupsTable();
+
+                    ui_symbols_listBox_sumbolsLists.SelectedItem = ui_symbols_listBox_sumbolsLists.Items[0];
                 }
             }
             else
@@ -994,8 +1016,7 @@ namespace DataAdmin.Forms
             var username = ui_symbols_comboBox_NotAllowedUsers.SelectedItem.ToString();
             DataManager.AddGroupForUser(userId, group);
 
-            Task.Factory.StartNew((Action)
-                                  (() => _adminService.SendToClientSymbolGroupList(username)));
+            Task.Factory.StartNew(() => _adminService.SendToClientSymbolGroupList(username));
             
           
             UpdateAllowedUsersTable();
@@ -1020,8 +1041,7 @@ namespace DataAdmin.Forms
             {
                 UpdateAllowedUsersTable();
             }
-            Task.Factory.StartNew((Action)
-                                  (() => _adminService.SendToClientSymbolGroupList(userLogin)));
+            Task.Factory.StartNew(() => _adminService.SendToClientSymbolGroupList(userLogin));
                                    
                 
         }
@@ -1039,7 +1059,7 @@ namespace DataAdmin.Forms
             var logs = DataManager.GetLogBetweenDates(dateStart, dateEnd);
             if (logs.Count > 0)
             {
-                //TODO: ui_logs_dGridX_Logs.Rows.Clear();
+                ui_logs_dGridX_Logs.Rows.Clear();
                 foreach (var log in logs)
                 {
                     var userName = _users.Find(a => a.Id == log.UserId).Name;
@@ -1057,10 +1077,5 @@ namespace DataAdmin.Forms
         #region LOGS
 
         #endregion
-
-        bool ExistTable()
-        {
-            return false?false:true;
-        }
     }
 }

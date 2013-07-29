@@ -29,37 +29,39 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.metroShellMain = new DevComponents.DotNetBar.Metro.MetroShell();
-            this.metroTabPanel_logs = new DevComponents.DotNetBar.Metro.MetroTabPanel();
-            this.tableLayoutPanel_logs = new System.Windows.Forms.TableLayoutPanel();
-            this.ui_logs_panelEx_main = new DevComponents.DotNetBar.PanelEx();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
-            this.ui_logs_buttonX_Find = new DevComponents.DotNetBar.ButtonX();
-            this.ui_logs_DTime_EndFilter = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.ui_logs_DTime_StartFilter = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.ui_logs_labelX_logs = new DevComponents.DotNetBar.LabelX();
-            this.panelEx3 = new DevComponents.DotNetBar.PanelEx();
-            this.ui_logs_dGridX_Logs = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.ui_logColumn_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ui_logColumn_UserLogin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ui_logColumn_MsgType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ui_logColumn_Symbol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ui_logColumn_group = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ui_logColumn_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ui_logColumn_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroTabPanel_symbols = new DevComponents.DotNetBar.Metro.MetroTabPanel();
+            this.tableLayoutPanel_symbols = new System.Windows.Forms.TableLayoutPanel();
+            this.ui_symbols_panelEx_symbolsLists = new DevComponents.DotNetBar.PanelEx();
+            this.ui_Symbols_ButtonX_DeleteList = new DevComponents.DotNetBar.ButtonX();
+            this.ui_Symbols_ButtonX_EditList = new DevComponents.DotNetBar.ButtonX();
+            this.ui_Symbols_ButtonX_AddList = new DevComponents.DotNetBar.ButtonX();
+            this.ui_symbols_listBox_sumbolsLists = new System.Windows.Forms.ListBox();
+            this.ui_symbols_labelX_SymbolLists = new DevComponents.DotNetBar.LabelX();
+            this.ui_symbols_panelEx_symbols = new DevComponents.DotNetBar.PanelEx();
+            this.ui_Symbols_ButtonX_Delete = new DevComponents.DotNetBar.ButtonX();
+            this.ui_Symbols_ButtonX_Edit = new DevComponents.DotNetBar.ButtonX();
+            this.ui_Symbols_ButtonX_Add = new DevComponents.DotNetBar.ButtonX();
+            this.ui_symbols_listBox_symbols = new System.Windows.Forms.ListBox();
+            this.ui_symbols_labelX_Symbols = new DevComponents.DotNetBar.LabelX();
+            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.ui_symbols_comboBox_NotAllowedUsers = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.ui_symbols_dgrid_AllowedUsers = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.ui_dGridCol_allowedUserLogin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ui_dGridCol_allowedUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ui_dGridCol_delete = new DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn();
+            this.ui_symbols_labelX_SListDetails = new DevComponents.DotNetBar.LabelX();
             this.metroTabPanelUsers = new DevComponents.DotNetBar.Metro.MetroTabPanel();
             this.tableLayoutPanel_users = new System.Windows.Forms.TableLayoutPanel();
             this.ui_users_panelEx_details = new DevComponents.DotNetBar.PanelEx();
@@ -89,28 +91,26 @@
             this.ui_home_panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.uiLastMessages = new System.Windows.Forms.ListBox();
             this.ui_home_labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.metroTabPanel_symbols = new DevComponents.DotNetBar.Metro.MetroTabPanel();
-            this.tableLayoutPanel_symbols = new System.Windows.Forms.TableLayoutPanel();
-            this.ui_symbols_panelEx_symbolsLists = new DevComponents.DotNetBar.PanelEx();
-            this.ui_Symbols_ButtonX_DeleteList = new DevComponents.DotNetBar.ButtonX();
-            this.ui_Symbols_ButtonX_EditList = new DevComponents.DotNetBar.ButtonX();
-            this.ui_Symbols_ButtonX_AddList = new DevComponents.DotNetBar.ButtonX();
-            this.ui_symbols_listBox_sumbolsLists = new System.Windows.Forms.ListBox();
-            this.ui_symbols_labelX_SymbolLists = new DevComponents.DotNetBar.LabelX();
-            this.ui_symbols_panelEx_symbols = new DevComponents.DotNetBar.PanelEx();
-            this.ui_Symbols_ButtonX_Delete = new DevComponents.DotNetBar.ButtonX();
-            this.ui_Symbols_ButtonX_Edit = new DevComponents.DotNetBar.ButtonX();
-            this.ui_Symbols_ButtonX_Add = new DevComponents.DotNetBar.ButtonX();
-            this.ui_symbols_listBox_symbols = new System.Windows.Forms.ListBox();
-            this.ui_symbols_labelX_Symbols = new DevComponents.DotNetBar.LabelX();
-            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
-            this.ui_symbols_comboBox_NotAllowedUsers = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.ui_symbols_dgrid_AllowedUsers = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.ui_dGridCol_allowedUserLogin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ui_dGridCol_allowedUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ui_dGridCol_delete = new DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn();
-            this.ui_symbols_labelX_SListDetails = new DevComponents.DotNetBar.LabelX();
+            this.metroTabPanel_logs = new DevComponents.DotNetBar.Metro.MetroTabPanel();
+            this.tableLayoutPanel_logs = new System.Windows.Forms.TableLayoutPanel();
+            this.ui_logs_panelEx_main = new DevComponents.DotNetBar.PanelEx();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
+            this.ui_logs_buttonX_Find = new DevComponents.DotNetBar.ButtonX();
+            this.ui_logs_DTime_EndFilter = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.ui_logs_DTime_StartFilter = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.ui_logs_labelX_logs = new DevComponents.DotNetBar.LabelX();
+            this.panelEx3 = new DevComponents.DotNetBar.PanelEx();
+            this.ui_logs_dGridX_Logs = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.ui_logColumn_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ui_logColumn_UserLogin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ui_logColumn_MsgType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ui_logColumn_Symbol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ui_logColumn_group = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ui_logColumn_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ui_logColumn_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabItem_home = new DevComponents.DotNetBar.Metro.MetroTabItem();
             this.metroTabItem_users = new DevComponents.DotNetBar.Metro.MetroTabItem();
             this.metroTabItem_symbols = new DevComponents.DotNetBar.Metro.MetroTabItem();
@@ -123,15 +123,12 @@
             this.dataAdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroShellMain.SuspendLayout();
-            this.metroTabPanel_logs.SuspendLayout();
-            this.tableLayoutPanel_logs.SuspendLayout();
-            this.ui_logs_panelEx_main.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.panelEx2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ui_logs_DTime_EndFilter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ui_logs_DTime_StartFilter)).BeginInit();
-            this.panelEx3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ui_logs_dGridX_Logs)).BeginInit();
+            this.metroTabPanel_symbols.SuspendLayout();
+            this.tableLayoutPanel_symbols.SuspendLayout();
+            this.ui_symbols_panelEx_symbolsLists.SuspendLayout();
+            this.ui_symbols_panelEx_symbols.SuspendLayout();
+            this.panelEx1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ui_symbols_dgrid_AllowedUsers)).BeginInit();
             this.metroTabPanelUsers.SuspendLayout();
             this.tableLayoutPanel_users.SuspendLayout();
             this.ui_users_panelEx_details.SuspendLayout();
@@ -143,12 +140,15 @@
             this.ui_home_panelEx3.SuspendLayout();
             this.ui_home_panelEx2.SuspendLayout();
             this.ui_home_panelEx1.SuspendLayout();
-            this.metroTabPanel_symbols.SuspendLayout();
-            this.tableLayoutPanel_symbols.SuspendLayout();
-            this.ui_symbols_panelEx_symbolsLists.SuspendLayout();
-            this.ui_symbols_panelEx_symbols.SuspendLayout();
-            this.panelEx1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ui_symbols_dgrid_AllowedUsers)).BeginInit();
+            this.metroTabPanel_logs.SuspendLayout();
+            this.tableLayoutPanel_logs.SuspendLayout();
+            this.ui_logs_panelEx_main.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panelEx2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ui_logs_DTime_EndFilter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ui_logs_DTime_StartFilter)).BeginInit();
+            this.panelEx3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ui_logs_dGridX_Logs)).BeginInit();
             this.contextMenuStripNotify.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -203,377 +203,367 @@
             this.metroShellMain.HelpButtonClick += new System.EventHandler(this.metroShell1_LogOutButtonClick);
             this.metroShellMain.Resize += new System.EventHandler(this.metroShell1_Resize);
             // 
-            // metroTabPanel_logs
-            // 
-            this.metroTabPanel_logs.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.metroTabPanel_logs.Controls.Add(this.tableLayoutPanel_logs);
-            this.metroTabPanel_logs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTabPanel_logs.Location = new System.Drawing.Point(0, 51);
-            this.metroTabPanel_logs.Name = "metroTabPanel_logs";
-            this.metroTabPanel_logs.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.metroTabPanel_logs.Size = new System.Drawing.Size(817, 437);
-            // 
-            // 
-            // 
-            this.metroTabPanel_logs.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.metroTabPanel_logs.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.metroTabPanel_logs.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTabPanel_logs.TabIndex = 5;
-            this.metroTabPanel_logs.Visible = false;
-            // 
-            // tableLayoutPanel_logs
-            // 
-            this.tableLayoutPanel_logs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
-            this.tableLayoutPanel_logs.ColumnCount = 1;
-            this.tableLayoutPanel_logs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel_logs.Controls.Add(this.ui_logs_panelEx_main, 0, 0);
-            this.tableLayoutPanel_logs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel_logs.ForeColor = System.Drawing.Color.Black;
-            this.tableLayoutPanel_logs.Location = new System.Drawing.Point(3, 0);
-            this.tableLayoutPanel_logs.Name = "tableLayoutPanel_logs";
-            this.tableLayoutPanel_logs.RowCount = 1;
-            this.tableLayoutPanel_logs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.84182F));
-            this.tableLayoutPanel_logs.Size = new System.Drawing.Size(811, 434);
-            this.tableLayoutPanel_logs.TabIndex = 0;
-            // 
-            // ui_logs_panelEx_main
-            // 
-            this.ui_logs_panelEx_main.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ui_logs_panelEx_main.Controls.Add(this.tableLayoutPanel1);
-            this.ui_logs_panelEx_main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ui_logs_panelEx_main.Location = new System.Drawing.Point(3, 3);
-            this.ui_logs_panelEx_main.Name = "ui_logs_panelEx_main";
-            this.ui_logs_panelEx_main.Size = new System.Drawing.Size(805, 428);
-            this.ui_logs_panelEx_main.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.ui_logs_panelEx_main.Style.BackColor1.Color = System.Drawing.Color.White;
-            this.ui_logs_panelEx_main.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.ui_logs_panelEx_main.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.ui_logs_panelEx_main.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.ui_logs_panelEx_main.Style.GradientAngle = 90;
-            this.ui_logs_panelEx_main.TabIndex = 2;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.panelEx2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panelEx3, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.ForeColor = System.Drawing.Color.Black;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(805, 428);
-            this.tableLayoutPanel1.TabIndex = 2;
-            // 
-            // panelEx2
-            // 
-            this.panelEx2.CanvasColor = System.Drawing.SystemColors.Control;
-            this.panelEx2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.panelEx2.Controls.Add(this.ui_logs_buttonX_Find);
-            this.panelEx2.Controls.Add(this.ui_logs_DTime_EndFilter);
-            this.panelEx2.Controls.Add(this.ui_logs_DTime_StartFilter);
-            this.panelEx2.Controls.Add(this.labelX2);
-            this.panelEx2.Controls.Add(this.labelX1);
-            this.panelEx2.Controls.Add(this.ui_logs_labelX_logs);
-            this.panelEx2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelEx2.Location = new System.Drawing.Point(3, 3);
-            this.panelEx2.Name = "panelEx2";
-            this.panelEx2.Size = new System.Drawing.Size(799, 74);
-            this.panelEx2.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.panelEx2.Style.BackColor1.Color = System.Drawing.Color.White;
-            this.panelEx2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.panelEx2.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.panelEx2.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.panelEx2.Style.GradientAngle = 90;
-            this.panelEx2.TabIndex = 0;
-            // 
-            // ui_logs_buttonX_Find
-            // 
-            this.ui_logs_buttonX_Find.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ui_logs_buttonX_Find.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.ui_logs_buttonX_Find.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ui_logs_buttonX_Find.Location = new System.Drawing.Point(498, 38);
-            this.ui_logs_buttonX_Find.Name = "ui_logs_buttonX_Find";
-            this.ui_logs_buttonX_Find.Size = new System.Drawing.Size(75, 26);
-            this.ui_logs_buttonX_Find.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ui_logs_buttonX_Find.TabIndex = 6;
-            this.ui_logs_buttonX_Find.Text = "Find";
-            this.ui_logs_buttonX_Find.Click += new System.EventHandler(this.ui_logs_buttonX_Find_Click);
-            // 
-            // ui_logs_DTime_EndFilter
-            // 
-            // 
-            // 
-            // 
-            this.ui_logs_DTime_EndFilter.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.ui_logs_DTime_EndFilter.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ui_logs_DTime_EndFilter.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.ui_logs_DTime_EndFilter.ButtonDropDown.Visible = true;
-            this.ui_logs_DTime_EndFilter.ForeColor = System.Drawing.Color.Black;
-            this.ui_logs_DTime_EndFilter.IsPopupCalendarOpen = false;
-            this.ui_logs_DTime_EndFilter.Location = new System.Drawing.Point(293, 38);
-            // 
-            // 
-            // 
-            this.ui_logs_DTime_EndFilter.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.ui_logs_DTime_EndFilter.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ui_logs_DTime_EndFilter.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
-            this.ui_logs_DTime_EndFilter.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.ui_logs_DTime_EndFilter.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.ui_logs_DTime_EndFilter.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.ui_logs_DTime_EndFilter.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.ui_logs_DTime_EndFilter.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.ui_logs_DTime_EndFilter.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.ui_logs_DTime_EndFilter.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.ui_logs_DTime_EndFilter.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ui_logs_DTime_EndFilter.MonthCalendar.DisplayMonth = new System.DateTime(2013, 7, 1, 0, 0, 0, 0);
-            this.ui_logs_DTime_EndFilter.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
-            this.ui_logs_DTime_EndFilter.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.ui_logs_DTime_EndFilter.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.ui_logs_DTime_EndFilter.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.ui_logs_DTime_EndFilter.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.ui_logs_DTime_EndFilter.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.ui_logs_DTime_EndFilter.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ui_logs_DTime_EndFilter.MonthCalendar.TodayButtonVisible = true;
-            this.ui_logs_DTime_EndFilter.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.ui_logs_DTime_EndFilter.Name = "ui_logs_DTime_EndFilter";
-            this.ui_logs_DTime_EndFilter.Size = new System.Drawing.Size(167, 22);
-            this.ui_logs_DTime_EndFilter.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ui_logs_DTime_EndFilter.TabIndex = 5;
-            this.ui_logs_DTime_EndFilter.Value = new System.DateTime(2013, 7, 29, 0, 0, 0, 0);
-            // 
-            // ui_logs_DTime_StartFilter
-            // 
-            // 
-            // 
-            // 
-            this.ui_logs_DTime_StartFilter.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.ui_logs_DTime_StartFilter.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ui_logs_DTime_StartFilter.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.ui_logs_DTime_StartFilter.ButtonDropDown.Visible = true;
-            this.ui_logs_DTime_StartFilter.ForeColor = System.Drawing.Color.Black;
-            this.ui_logs_DTime_StartFilter.IsPopupCalendarOpen = false;
-            this.ui_logs_DTime_StartFilter.Location = new System.Drawing.Point(57, 38);
-            // 
-            // 
-            // 
-            this.ui_logs_DTime_StartFilter.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.ui_logs_DTime_StartFilter.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ui_logs_DTime_StartFilter.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
-            this.ui_logs_DTime_StartFilter.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.ui_logs_DTime_StartFilter.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.ui_logs_DTime_StartFilter.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.ui_logs_DTime_StartFilter.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.ui_logs_DTime_StartFilter.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.ui_logs_DTime_StartFilter.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.ui_logs_DTime_StartFilter.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.ui_logs_DTime_StartFilter.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ui_logs_DTime_StartFilter.MonthCalendar.DisplayMonth = new System.DateTime(2013, 7, 1, 0, 0, 0, 0);
-            this.ui_logs_DTime_StartFilter.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
-            this.ui_logs_DTime_StartFilter.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.ui_logs_DTime_StartFilter.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.ui_logs_DTime_StartFilter.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.ui_logs_DTime_StartFilter.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.ui_logs_DTime_StartFilter.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.ui_logs_DTime_StartFilter.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ui_logs_DTime_StartFilter.MonthCalendar.TodayButtonVisible = true;
-            this.ui_logs_DTime_StartFilter.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.ui_logs_DTime_StartFilter.Name = "ui_logs_DTime_StartFilter";
-            this.ui_logs_DTime_StartFilter.Size = new System.Drawing.Size(167, 22);
-            this.ui_logs_DTime_StartFilter.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ui_logs_DTime_StartFilter.TabIndex = 4;
-            this.ui_logs_DTime_StartFilter.Value = new System.DateTime(2013, 7, 28, 0, 0, 0, 0);
-            // 
-            // labelX2
-            // 
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelX2.ForeColor = System.Drawing.Color.Black;
-            this.labelX2.Location = new System.Drawing.Point(253, 34);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(34, 23);
-            this.labelX2.TabIndex = 3;
-            this.labelX2.Text = "End";
-            this.labelX2.TextAlignment = System.Drawing.StringAlignment.Far;
-            this.labelX2.TextLineAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // labelX1
-            // 
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelX1.ForeColor = System.Drawing.Color.Black;
-            this.labelX1.Location = new System.Drawing.Point(10, 38);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(35, 23);
-            this.labelX1.TabIndex = 2;
-            this.labelX1.Text = "Start";
-            this.labelX1.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // ui_logs_labelX_logs
-            // 
-            // 
-            // 
-            // 
-            this.ui_logs_labelX_logs.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ui_logs_labelX_logs.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.ui_logs_labelX_logs.ForeColor = System.Drawing.Color.Black;
-            this.ui_logs_labelX_logs.Location = new System.Drawing.Point(0, 0);
-            this.ui_logs_labelX_logs.Name = "ui_logs_labelX_logs";
-            this.ui_logs_labelX_logs.PaddingLeft = 6;
-            this.ui_logs_labelX_logs.Size = new System.Drawing.Size(805, 23);
-            this.ui_logs_labelX_logs.TabIndex = 1;
-            this.ui_logs_labelX_logs.Text = "LOGS";
-            // 
-            // panelEx3
-            // 
-            this.panelEx3.CanvasColor = System.Drawing.SystemColors.Control;
-            this.panelEx3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.panelEx3.Controls.Add(this.ui_logs_dGridX_Logs);
-            this.panelEx3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelEx3.Location = new System.Drawing.Point(3, 83);
-            this.panelEx3.Name = "panelEx3";
-            this.panelEx3.Size = new System.Drawing.Size(799, 342);
-            this.panelEx3.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.panelEx3.Style.BackColor1.Color = System.Drawing.Color.White;
-            this.panelEx3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.panelEx3.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.panelEx3.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.panelEx3.Style.GradientAngle = 90;
-            this.panelEx3.TabIndex = 1;
-            // 
-            // ui_logs_dGridX_Logs
-            // 
-            this.ui_logs_dGridX_Logs.AllowUserToAddRows = false;
-            this.ui_logs_dGridX_Logs.AllowUserToDeleteRows = false;
-            this.ui_logs_dGridX_Logs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.ui_logs_dGridX_Logs.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ui_logs_dGridX_Logs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.ui_logs_dGridX_Logs.ColumnHeadersHeight = 30;
-            this.ui_logs_dGridX_Logs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.ui_logs_dGridX_Logs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ui_logColumn_Date,
-            this.ui_logColumn_UserLogin,
-            this.ui_logColumn_MsgType,
-            this.ui_logColumn_Symbol,
-            this.ui_logColumn_group,
-            this.ui_logColumn_Description,
-            this.ui_logColumn_Status});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ui_logs_dGridX_Logs.DefaultCellStyle = dataGridViewCellStyle8;
-            this.ui_logs_dGridX_Logs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ui_logs_dGridX_Logs.EnableHeadersVisualStyles = false;
-            this.ui_logs_dGridX_Logs.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.ui_logs_dGridX_Logs.Location = new System.Drawing.Point(0, 0);
-            this.ui_logs_dGridX_Logs.Name = "ui_logs_dGridX_Logs";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ui_logs_dGridX_Logs.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.ui_logs_dGridX_Logs.RowHeadersVisible = false;
-            this.ui_logs_dGridX_Logs.RowTemplate.Height = 24;
-            this.ui_logs_dGridX_Logs.Size = new System.Drawing.Size(799, 342);
-            this.ui_logs_dGridX_Logs.TabIndex = 0;
-            // 
-            // ui_logColumn_Date
-            // 
-            this.ui_logColumn_Date.FillWeight = 50F;
-            this.ui_logColumn_Date.HeaderText = "Date";
-            this.ui_logColumn_Date.Name = "ui_logColumn_Date";
-            this.ui_logColumn_Date.ReadOnly = true;
-            this.ui_logColumn_Date.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // ui_logColumn_UserLogin
-            // 
-            this.ui_logColumn_UserLogin.FillWeight = 63.89933F;
-            this.ui_logColumn_UserLogin.HeaderText = "User";
-            this.ui_logColumn_UserLogin.Name = "ui_logColumn_UserLogin";
-            this.ui_logColumn_UserLogin.ReadOnly = true;
-            // 
-            // ui_logColumn_MsgType
-            // 
-            this.ui_logColumn_MsgType.FillWeight = 63.89933F;
-            this.ui_logColumn_MsgType.HeaderText = "Event";
-            this.ui_logColumn_MsgType.Name = "ui_logColumn_MsgType";
-            this.ui_logColumn_MsgType.ReadOnly = true;
-            // 
-            // ui_logColumn_Symbol
-            // 
-            this.ui_logColumn_Symbol.FillWeight = 79.87417F;
-            this.ui_logColumn_Symbol.HeaderText = "Symbol";
-            this.ui_logColumn_Symbol.Name = "ui_logColumn_Symbol";
-            this.ui_logColumn_Symbol.ReadOnly = true;
-            // 
-            // ui_logColumn_group
-            // 
-            this.ui_logColumn_group.FillWeight = 79.87417F;
-            this.ui_logColumn_group.HeaderText = "Group";
-            this.ui_logColumn_group.Name = "ui_logColumn_group";
-            this.ui_logColumn_group.ReadOnly = true;
-            // 
-            // ui_logColumn_Description
-            // 
-            this.ui_logColumn_Description.FillWeight = 199.6854F;
-            this.ui_logColumn_Description.HeaderText = "Description";
-            this.ui_logColumn_Description.Name = "ui_logColumn_Description";
-            this.ui_logColumn_Description.ReadOnly = true;
-            // 
-            // ui_logColumn_Status
-            // 
-            this.ui_logColumn_Status.FillWeight = 40F;
-            this.ui_logColumn_Status.HeaderText = "Status";
-            this.ui_logColumn_Status.Name = "ui_logColumn_Status";
-            this.ui_logColumn_Status.ReadOnly = true;
+            // metroTabPanel_symbols
+            // 
+            this.metroTabPanel_symbols.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.metroTabPanel_symbols.Controls.Add(this.tableLayoutPanel_symbols);
+            this.metroTabPanel_symbols.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTabPanel_symbols.Location = new System.Drawing.Point(0, 55);
+            this.metroTabPanel_symbols.Name = "metroTabPanel_symbols";
+            this.metroTabPanel_symbols.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.metroTabPanel_symbols.Size = new System.Drawing.Size(817, 433);
+            // 
+            // 
+            // 
+            this.metroTabPanel_symbols.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.metroTabPanel_symbols.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.metroTabPanel_symbols.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTabPanel_symbols.TabIndex = 4;
+            // 
+            // tableLayoutPanel_symbols
+            // 
+            this.tableLayoutPanel_symbols.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
+            this.tableLayoutPanel_symbols.ColumnCount = 3;
+            this.tableLayoutPanel_symbols.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.36364F));
+            this.tableLayoutPanel_symbols.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.36364F));
+            this.tableLayoutPanel_symbols.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.27273F));
+            this.tableLayoutPanel_symbols.Controls.Add(this.ui_symbols_panelEx_symbolsLists, 1, 0);
+            this.tableLayoutPanel_symbols.Controls.Add(this.ui_symbols_panelEx_symbols, 0, 0);
+            this.tableLayoutPanel_symbols.Controls.Add(this.panelEx1, 2, 0);
+            this.tableLayoutPanel_symbols.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel_symbols.ForeColor = System.Drawing.Color.Black;
+            this.tableLayoutPanel_symbols.Location = new System.Drawing.Point(3, 0);
+            this.tableLayoutPanel_symbols.Name = "tableLayoutPanel_symbols";
+            this.tableLayoutPanel_symbols.RowCount = 1;
+            this.tableLayoutPanel_symbols.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel_symbols.Size = new System.Drawing.Size(811, 430);
+            this.tableLayoutPanel_symbols.TabIndex = 2;
+            // 
+            // ui_symbols_panelEx_symbolsLists
+            // 
+            this.ui_symbols_panelEx_symbolsLists.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ui_symbols_panelEx_symbolsLists.Controls.Add(this.ui_Symbols_ButtonX_DeleteList);
+            this.ui_symbols_panelEx_symbolsLists.Controls.Add(this.ui_Symbols_ButtonX_EditList);
+            this.ui_symbols_panelEx_symbolsLists.Controls.Add(this.ui_Symbols_ButtonX_AddList);
+            this.ui_symbols_panelEx_symbolsLists.Controls.Add(this.ui_symbols_listBox_sumbolsLists);
+            this.ui_symbols_panelEx_symbolsLists.Controls.Add(this.ui_symbols_labelX_SymbolLists);
+            this.ui_symbols_panelEx_symbolsLists.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ui_symbols_panelEx_symbolsLists.Location = new System.Drawing.Point(297, 3);
+            this.ui_symbols_panelEx_symbolsLists.Name = "ui_symbols_panelEx_symbolsLists";
+            this.ui_symbols_panelEx_symbolsLists.Size = new System.Drawing.Size(288, 424);
+            this.ui_symbols_panelEx_symbolsLists.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.ui_symbols_panelEx_symbolsLists.Style.BackColor1.Color = System.Drawing.Color.White;
+            this.ui_symbols_panelEx_symbolsLists.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.ui_symbols_panelEx_symbolsLists.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.ui_symbols_panelEx_symbolsLists.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.ui_symbols_panelEx_symbolsLists.Style.GradientAngle = 90;
+            this.ui_symbols_panelEx_symbolsLists.TabIndex = 4;
+            // 
+            // ui_Symbols_ButtonX_DeleteList
+            // 
+            this.ui_Symbols_ButtonX_DeleteList.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ui_Symbols_ButtonX_DeleteList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ui_Symbols_ButtonX_DeleteList.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ui_Symbols_ButtonX_DeleteList.Location = new System.Drawing.Point(254, 4);
+            this.ui_Symbols_ButtonX_DeleteList.Name = "ui_Symbols_ButtonX_DeleteList";
+            this.ui_Symbols_ButtonX_DeleteList.Size = new System.Drawing.Size(30, 23);
+            this.ui_Symbols_ButtonX_DeleteList.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ui_Symbols_ButtonX_DeleteList.TabIndex = 12;
+            this.ui_Symbols_ButtonX_DeleteList.Text = "-";
+            this.ui_Symbols_ButtonX_DeleteList.Tooltip = "Delete symbol";
+            this.ui_Symbols_ButtonX_DeleteList.Click += new System.EventHandler(this.ui_Symbols_ButtonX_DeleteList_Click);
+            // 
+            // ui_Symbols_ButtonX_EditList
+            // 
+            this.ui_Symbols_ButtonX_EditList.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ui_Symbols_ButtonX_EditList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ui_Symbols_ButtonX_EditList.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ui_Symbols_ButtonX_EditList.Location = new System.Drawing.Point(218, 4);
+            this.ui_Symbols_ButtonX_EditList.Name = "ui_Symbols_ButtonX_EditList";
+            this.ui_Symbols_ButtonX_EditList.Size = new System.Drawing.Size(30, 23);
+            this.ui_Symbols_ButtonX_EditList.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ui_Symbols_ButtonX_EditList.TabIndex = 11;
+            this.ui_Symbols_ButtonX_EditList.Text = "*";
+            this.ui_Symbols_ButtonX_EditList.Tooltip = "Edit symbol";
+            this.ui_Symbols_ButtonX_EditList.Click += new System.EventHandler(this.ui_Symbols_ButtonX_EditList_Click);
+            // 
+            // ui_Symbols_ButtonX_AddList
+            // 
+            this.ui_Symbols_ButtonX_AddList.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ui_Symbols_ButtonX_AddList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ui_Symbols_ButtonX_AddList.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ui_Symbols_ButtonX_AddList.Location = new System.Drawing.Point(182, 4);
+            this.ui_Symbols_ButtonX_AddList.Name = "ui_Symbols_ButtonX_AddList";
+            this.ui_Symbols_ButtonX_AddList.Size = new System.Drawing.Size(30, 23);
+            this.ui_Symbols_ButtonX_AddList.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ui_Symbols_ButtonX_AddList.TabIndex = 10;
+            this.ui_Symbols_ButtonX_AddList.Text = "+";
+            this.ui_Symbols_ButtonX_AddList.Tooltip = "Add new symbol";
+            this.ui_Symbols_ButtonX_AddList.Click += new System.EventHandler(this.ui_Symbols_ButtonX_AddList_Click);
+            // 
+            // ui_symbols_listBox_sumbolsLists
+            // 
+            this.ui_symbols_listBox_sumbolsLists.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ui_symbols_listBox_sumbolsLists.BackColor = System.Drawing.Color.White;
+            this.ui_symbols_listBox_sumbolsLists.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ui_symbols_listBox_sumbolsLists.ForeColor = System.Drawing.Color.Black;
+            this.ui_symbols_listBox_sumbolsLists.FormattingEnabled = true;
+            this.ui_symbols_listBox_sumbolsLists.ItemHeight = 19;
+            this.ui_symbols_listBox_sumbolsLists.Location = new System.Drawing.Point(3, 30);
+            this.ui_symbols_listBox_sumbolsLists.Name = "ui_symbols_listBox_sumbolsLists";
+            this.ui_symbols_listBox_sumbolsLists.Size = new System.Drawing.Size(282, 114);
+            this.ui_symbols_listBox_sumbolsLists.TabIndex = 6;
+            this.ui_symbols_listBox_sumbolsLists.SelectedIndexChanged += new System.EventHandler(this.ui_symbols_listBox_sumbolsLists_SelectedIndexChanged);
+            // 
+            // ui_symbols_labelX_SymbolLists
+            // 
+            // 
+            // 
+            // 
+            this.ui_symbols_labelX_SymbolLists.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ui_symbols_labelX_SymbolLists.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ui_symbols_labelX_SymbolLists.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ui_symbols_labelX_SymbolLists.ForeColor = System.Drawing.Color.Black;
+            this.ui_symbols_labelX_SymbolLists.Location = new System.Drawing.Point(0, 0);
+            this.ui_symbols_labelX_SymbolLists.Name = "ui_symbols_labelX_SymbolLists";
+            this.ui_symbols_labelX_SymbolLists.PaddingLeft = 6;
+            this.ui_symbols_labelX_SymbolLists.Size = new System.Drawing.Size(288, 23);
+            this.ui_symbols_labelX_SymbolLists.TabIndex = 1;
+            this.ui_symbols_labelX_SymbolLists.Text = "SYMBOL LISTS";
+            // 
+            // ui_symbols_panelEx_symbols
+            // 
+            this.ui_symbols_panelEx_symbols.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ui_symbols_panelEx_symbols.Controls.Add(this.ui_Symbols_ButtonX_Delete);
+            this.ui_symbols_panelEx_symbols.Controls.Add(this.ui_Symbols_ButtonX_Edit);
+            this.ui_symbols_panelEx_symbols.Controls.Add(this.ui_Symbols_ButtonX_Add);
+            this.ui_symbols_panelEx_symbols.Controls.Add(this.ui_symbols_listBox_symbols);
+            this.ui_symbols_panelEx_symbols.Controls.Add(this.ui_symbols_labelX_Symbols);
+            this.ui_symbols_panelEx_symbols.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ui_symbols_panelEx_symbols.Location = new System.Drawing.Point(3, 3);
+            this.ui_symbols_panelEx_symbols.Name = "ui_symbols_panelEx_symbols";
+            this.ui_symbols_panelEx_symbols.Size = new System.Drawing.Size(288, 424);
+            this.ui_symbols_panelEx_symbols.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.ui_symbols_panelEx_symbols.Style.BackColor1.Color = System.Drawing.Color.White;
+            this.ui_symbols_panelEx_symbols.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.ui_symbols_panelEx_symbols.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.ui_symbols_panelEx_symbols.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.ui_symbols_panelEx_symbols.Style.GradientAngle = 90;
+            this.ui_symbols_panelEx_symbols.TabIndex = 3;
+            // 
+            // ui_Symbols_ButtonX_Delete
+            // 
+            this.ui_Symbols_ButtonX_Delete.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ui_Symbols_ButtonX_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ui_Symbols_ButtonX_Delete.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ui_Symbols_ButtonX_Delete.Location = new System.Drawing.Point(254, 4);
+            this.ui_Symbols_ButtonX_Delete.Name = "ui_Symbols_ButtonX_Delete";
+            this.ui_Symbols_ButtonX_Delete.Size = new System.Drawing.Size(30, 23);
+            this.ui_Symbols_ButtonX_Delete.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ui_Symbols_ButtonX_Delete.TabIndex = 9;
+            this.ui_Symbols_ButtonX_Delete.Text = "-";
+            this.ui_Symbols_ButtonX_Delete.Tooltip = "Delete symbol";
+            this.ui_Symbols_ButtonX_Delete.Click += new System.EventHandler(this.ui_Symbols_ButtonX_Delete_Click);
+            // 
+            // ui_Symbols_ButtonX_Edit
+            // 
+            this.ui_Symbols_ButtonX_Edit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ui_Symbols_ButtonX_Edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ui_Symbols_ButtonX_Edit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ui_Symbols_ButtonX_Edit.Location = new System.Drawing.Point(218, 4);
+            this.ui_Symbols_ButtonX_Edit.Name = "ui_Symbols_ButtonX_Edit";
+            this.ui_Symbols_ButtonX_Edit.Size = new System.Drawing.Size(30, 23);
+            this.ui_Symbols_ButtonX_Edit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ui_Symbols_ButtonX_Edit.TabIndex = 8;
+            this.ui_Symbols_ButtonX_Edit.Text = "*";
+            this.ui_Symbols_ButtonX_Edit.Tooltip = "Edit symbol";
+            this.ui_Symbols_ButtonX_Edit.Click += new System.EventHandler(this.ui_Symbols_ButtonX_Edit_Click);
+            // 
+            // ui_Symbols_ButtonX_Add
+            // 
+            this.ui_Symbols_ButtonX_Add.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ui_Symbols_ButtonX_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ui_Symbols_ButtonX_Add.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ui_Symbols_ButtonX_Add.Location = new System.Drawing.Point(182, 4);
+            this.ui_Symbols_ButtonX_Add.Name = "ui_Symbols_ButtonX_Add";
+            this.ui_Symbols_ButtonX_Add.Size = new System.Drawing.Size(30, 23);
+            this.ui_Symbols_ButtonX_Add.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ui_Symbols_ButtonX_Add.TabIndex = 7;
+            this.ui_Symbols_ButtonX_Add.Text = "+";
+            this.ui_Symbols_ButtonX_Add.Tooltip = "Add new symbol";
+            this.ui_Symbols_ButtonX_Add.Click += new System.EventHandler(this.ui_Symbols_ButtonX_Add_Click);
+            // 
+            // ui_symbols_listBox_symbols
+            // 
+            this.ui_symbols_listBox_symbols.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ui_symbols_listBox_symbols.BackColor = System.Drawing.Color.White;
+            this.ui_symbols_listBox_symbols.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ui_symbols_listBox_symbols.ForeColor = System.Drawing.Color.Black;
+            this.ui_symbols_listBox_symbols.FormattingEnabled = true;
+            this.ui_symbols_listBox_symbols.ItemHeight = 19;
+            this.ui_symbols_listBox_symbols.Location = new System.Drawing.Point(3, 30);
+            this.ui_symbols_listBox_symbols.Name = "ui_symbols_listBox_symbols";
+            this.ui_symbols_listBox_symbols.Size = new System.Drawing.Size(282, 114);
+            this.ui_symbols_listBox_symbols.TabIndex = 6;
+            // 
+            // ui_symbols_labelX_Symbols
+            // 
+            // 
+            // 
+            // 
+            this.ui_symbols_labelX_Symbols.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ui_symbols_labelX_Symbols.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ui_symbols_labelX_Symbols.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ui_symbols_labelX_Symbols.ForeColor = System.Drawing.Color.Black;
+            this.ui_symbols_labelX_Symbols.Location = new System.Drawing.Point(0, 0);
+            this.ui_symbols_labelX_Symbols.Name = "ui_symbols_labelX_Symbols";
+            this.ui_symbols_labelX_Symbols.PaddingLeft = 6;
+            this.ui_symbols_labelX_Symbols.Size = new System.Drawing.Size(288, 23);
+            this.ui_symbols_labelX_Symbols.TabIndex = 1;
+            this.ui_symbols_labelX_Symbols.Text = "SYMBOLS";
+            // 
+            // panelEx1
+            // 
+            this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.panelEx1.Controls.Add(this.buttonX1);
+            this.panelEx1.Controls.Add(this.ui_symbols_comboBox_NotAllowedUsers);
+            this.panelEx1.Controls.Add(this.ui_symbols_dgrid_AllowedUsers);
+            this.panelEx1.Controls.Add(this.ui_symbols_labelX_SListDetails);
+            this.panelEx1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEx1.Location = new System.Drawing.Point(591, 3);
+            this.panelEx1.Name = "panelEx1";
+            this.panelEx1.Size = new System.Drawing.Size(217, 424);
+            this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.panelEx1.Style.BackColor1.Color = System.Drawing.Color.White;
+            this.panelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.panelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.panelEx1.Style.GradientAngle = 90;
+            this.panelEx1.TabIndex = 5;
+            // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Location = new System.Drawing.Point(36, 73);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(144, 27);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 5;
+            this.buttonX1.Text = "Allow user current list";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
+            // 
+            // ui_symbols_comboBox_NotAllowedUsers
+            // 
+            this.ui_symbols_comboBox_NotAllowedUsers.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ui_symbols_comboBox_NotAllowedUsers.DisplayMember = "Text";
+            this.ui_symbols_comboBox_NotAllowedUsers.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ui_symbols_comboBox_NotAllowedUsers.ForeColor = System.Drawing.Color.Black;
+            this.ui_symbols_comboBox_NotAllowedUsers.FormattingEnabled = true;
+            this.ui_symbols_comboBox_NotAllowedUsers.ItemHeight = 20;
+            this.ui_symbols_comboBox_NotAllowedUsers.Location = new System.Drawing.Point(26, 38);
+            this.ui_symbols_comboBox_NotAllowedUsers.Name = "ui_symbols_comboBox_NotAllowedUsers";
+            this.ui_symbols_comboBox_NotAllowedUsers.Size = new System.Drawing.Size(168, 26);
+            this.ui_symbols_comboBox_NotAllowedUsers.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ui_symbols_comboBox_NotAllowedUsers.TabIndex = 4;
+            // 
+            // ui_symbols_dgrid_AllowedUsers
+            // 
+            this.ui_symbols_dgrid_AllowedUsers.AllowUserToAddRows = false;
+            this.ui_symbols_dgrid_AllowedUsers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ui_symbols_dgrid_AllowedUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ui_symbols_dgrid_AllowedUsers.BackgroundColor = System.Drawing.Color.White;
+            this.ui_symbols_dgrid_AllowedUsers.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ui_symbols_dgrid_AllowedUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.ui_symbols_dgrid_AllowedUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ui_symbols_dgrid_AllowedUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ui_dGridCol_allowedUserLogin,
+            this.ui_dGridCol_allowedUserName,
+            this.ui_dGridCol_delete});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ui_symbols_dgrid_AllowedUsers.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ui_symbols_dgrid_AllowedUsers.EnableHeadersVisualStyles = false;
+            this.ui_symbols_dgrid_AllowedUsers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.ui_symbols_dgrid_AllowedUsers.Location = new System.Drawing.Point(1, 109);
+            this.ui_symbols_dgrid_AllowedUsers.Name = "ui_symbols_dgrid_AllowedUsers";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ui_symbols_dgrid_AllowedUsers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.ui_symbols_dgrid_AllowedUsers.RowHeadersVisible = false;
+            this.ui_symbols_dgrid_AllowedUsers.RowTemplate.Height = 24;
+            this.ui_symbols_dgrid_AllowedUsers.Size = new System.Drawing.Size(215, 311);
+            this.ui_symbols_dgrid_AllowedUsers.TabIndex = 3;
+            this.ui_symbols_dgrid_AllowedUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ui_symbols_dgrid_AllowedUsers_CellClick);
+            // 
+            // ui_dGridCol_allowedUserLogin
+            // 
+            this.ui_dGridCol_allowedUserLogin.FillWeight = 71F;
+            this.ui_dGridCol_allowedUserLogin.HeaderText = "Login";
+            this.ui_dGridCol_allowedUserLogin.Name = "ui_dGridCol_allowedUserLogin";
+            this.ui_dGridCol_allowedUserLogin.ReadOnly = true;
+            // 
+            // ui_dGridCol_allowedUserName
+            // 
+            this.ui_dGridCol_allowedUserName.FillWeight = 72F;
+            this.ui_dGridCol_allowedUserName.HeaderText = "Name";
+            this.ui_dGridCol_allowedUserName.Name = "ui_dGridCol_allowedUserName";
+            this.ui_dGridCol_allowedUserName.ReadOnly = true;
+            // 
+            // ui_dGridCol_delete
+            // 
+            this.ui_dGridCol_delete.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.ui_dGridCol_delete.FillWeight = 30F;
+            this.ui_dGridCol_delete.HeaderText = "";
+            this.ui_dGridCol_delete.Name = "ui_dGridCol_delete";
+            this.ui_dGridCol_delete.ReadOnly = true;
+            this.ui_dGridCol_delete.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+            this.ui_dGridCol_delete.Text = "X";
+            // 
+            // ui_symbols_labelX_SListDetails
+            // 
+            // 
+            // 
+            // 
+            this.ui_symbols_labelX_SListDetails.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ui_symbols_labelX_SListDetails.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ui_symbols_labelX_SListDetails.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ui_symbols_labelX_SListDetails.ForeColor = System.Drawing.Color.Black;
+            this.ui_symbols_labelX_SListDetails.Location = new System.Drawing.Point(0, 0);
+            this.ui_symbols_labelX_SListDetails.Name = "ui_symbols_labelX_SListDetails";
+            this.ui_symbols_labelX_SListDetails.PaddingLeft = 6;
+            this.ui_symbols_labelX_SListDetails.Size = new System.Drawing.Size(217, 23);
+            this.ui_symbols_labelX_SListDetails.TabIndex = 2;
+            this.ui_symbols_labelX_SListDetails.Text = "ALLOWED USERS ";
             // 
             // metroTabPanelUsers
             // 
@@ -895,9 +885,10 @@
             this.listBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox3.ForeColor = System.Drawing.Color.Black;
             this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 19;
             this.listBox3.Location = new System.Drawing.Point(3, 25);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(394, 91);
+            this.listBox3.Size = new System.Drawing.Size(394, 76);
             this.listBox3.TabIndex = 7;
             // 
             // ui_home_labelX4
@@ -942,9 +933,10 @@
             this.uiWhoIsOnline.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.uiWhoIsOnline.ForeColor = System.Drawing.Color.Black;
             this.uiWhoIsOnline.FormattingEnabled = true;
+            this.uiWhoIsOnline.ItemHeight = 19;
             this.uiWhoIsOnline.Location = new System.Drawing.Point(3, 25);
             this.uiWhoIsOnline.Name = "uiWhoIsOnline";
-            this.uiWhoIsOnline.Size = new System.Drawing.Size(389, 91);
+            this.uiWhoIsOnline.Size = new System.Drawing.Size(389, 76);
             this.uiWhoIsOnline.TabIndex = 6;
             // 
             // ui_home_labelX2
@@ -989,9 +981,10 @@
             this.listBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox4.ForeColor = System.Drawing.Color.Black;
             this.listBox4.FormattingEnabled = true;
+            this.listBox4.ItemHeight = 19;
             this.listBox4.Location = new System.Drawing.Point(3, 25);
             this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(394, 91);
+            this.listBox4.Size = new System.Drawing.Size(394, 76);
             this.listBox4.TabIndex = 8;
             // 
             // ui_home_labelX3
@@ -1036,9 +1029,10 @@
             this.uiLastMessages.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.uiLastMessages.ForeColor = System.Drawing.Color.Black;
             this.uiLastMessages.FormattingEnabled = true;
+            this.uiLastMessages.ItemHeight = 19;
             this.uiLastMessages.Location = new System.Drawing.Point(3, 25);
             this.uiLastMessages.Name = "uiLastMessages";
-            this.uiLastMessages.Size = new System.Drawing.Size(389, 91);
+            this.uiLastMessages.Size = new System.Drawing.Size(389, 76);
             this.uiLastMessages.TabIndex = 6;
             // 
             // ui_home_labelX1
@@ -1057,365 +1051,377 @@
             this.ui_home_labelX1.TabIndex = 1;
             this.ui_home_labelX1.Text = "LAST MESSAGES";
             // 
-            // metroTabPanel_symbols
+            // metroTabPanel_logs
             // 
-            this.metroTabPanel_symbols.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.metroTabPanel_symbols.Controls.Add(this.tableLayoutPanel_symbols);
-            this.metroTabPanel_symbols.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTabPanel_symbols.Location = new System.Drawing.Point(0, 51);
-            this.metroTabPanel_symbols.Name = "metroTabPanel_symbols";
-            this.metroTabPanel_symbols.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.metroTabPanel_symbols.Size = new System.Drawing.Size(817, 437);
-            // 
-            // 
-            // 
-            this.metroTabPanel_symbols.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTabPanel_logs.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.metroTabPanel_logs.Controls.Add(this.tableLayoutPanel_logs);
+            this.metroTabPanel_logs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTabPanel_logs.Location = new System.Drawing.Point(0, 51);
+            this.metroTabPanel_logs.Name = "metroTabPanel_logs";
+            this.metroTabPanel_logs.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.metroTabPanel_logs.Size = new System.Drawing.Size(817, 437);
             // 
             // 
             // 
-            this.metroTabPanel_symbols.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTabPanel_logs.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.metroTabPanel_symbols.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTabPanel_symbols.TabIndex = 4;
+            this.metroTabPanel_logs.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
-            // tableLayoutPanel_symbols
             // 
-            this.tableLayoutPanel_symbols.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
-            this.tableLayoutPanel_symbols.ColumnCount = 3;
-            this.tableLayoutPanel_symbols.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.36364F));
-            this.tableLayoutPanel_symbols.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.36364F));
-            this.tableLayoutPanel_symbols.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.27273F));
-            this.tableLayoutPanel_symbols.Controls.Add(this.ui_symbols_panelEx_symbolsLists, 1, 0);
-            this.tableLayoutPanel_symbols.Controls.Add(this.ui_symbols_panelEx_symbols, 0, 0);
-            this.tableLayoutPanel_symbols.Controls.Add(this.panelEx1, 2, 0);
-            this.tableLayoutPanel_symbols.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel_symbols.ForeColor = System.Drawing.Color.Black;
-            this.tableLayoutPanel_symbols.Location = new System.Drawing.Point(3, 0);
-            this.tableLayoutPanel_symbols.Name = "tableLayoutPanel_symbols";
-            this.tableLayoutPanel_symbols.RowCount = 1;
-            this.tableLayoutPanel_symbols.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel_symbols.Size = new System.Drawing.Size(811, 434);
-            this.tableLayoutPanel_symbols.TabIndex = 2;
             // 
-            // ui_symbols_panelEx_symbolsLists
+            this.metroTabPanel_logs.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTabPanel_logs.TabIndex = 5;
+            this.metroTabPanel_logs.Visible = false;
             // 
-            this.ui_symbols_panelEx_symbolsLists.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ui_symbols_panelEx_symbolsLists.Controls.Add(this.ui_Symbols_ButtonX_DeleteList);
-            this.ui_symbols_panelEx_symbolsLists.Controls.Add(this.ui_Symbols_ButtonX_EditList);
-            this.ui_symbols_panelEx_symbolsLists.Controls.Add(this.ui_Symbols_ButtonX_AddList);
-            this.ui_symbols_panelEx_symbolsLists.Controls.Add(this.ui_symbols_listBox_sumbolsLists);
-            this.ui_symbols_panelEx_symbolsLists.Controls.Add(this.ui_symbols_labelX_SymbolLists);
-            this.ui_symbols_panelEx_symbolsLists.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ui_symbols_panelEx_symbolsLists.Location = new System.Drawing.Point(297, 3);
-            this.ui_symbols_panelEx_symbolsLists.Name = "ui_symbols_panelEx_symbolsLists";
-            this.ui_symbols_panelEx_symbolsLists.Size = new System.Drawing.Size(288, 428);
-            this.ui_symbols_panelEx_symbolsLists.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.ui_symbols_panelEx_symbolsLists.Style.BackColor1.Color = System.Drawing.Color.White;
-            this.ui_symbols_panelEx_symbolsLists.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.ui_symbols_panelEx_symbolsLists.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.ui_symbols_panelEx_symbolsLists.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.ui_symbols_panelEx_symbolsLists.Style.GradientAngle = 90;
-            this.ui_symbols_panelEx_symbolsLists.TabIndex = 4;
+            // tableLayoutPanel_logs
             // 
-            // ui_Symbols_ButtonX_DeleteList
+            this.tableLayoutPanel_logs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
+            this.tableLayoutPanel_logs.ColumnCount = 1;
+            this.tableLayoutPanel_logs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel_logs.Controls.Add(this.ui_logs_panelEx_main, 0, 0);
+            this.tableLayoutPanel_logs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel_logs.ForeColor = System.Drawing.Color.Black;
+            this.tableLayoutPanel_logs.Location = new System.Drawing.Point(3, 0);
+            this.tableLayoutPanel_logs.Name = "tableLayoutPanel_logs";
+            this.tableLayoutPanel_logs.RowCount = 1;
+            this.tableLayoutPanel_logs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.84182F));
+            this.tableLayoutPanel_logs.Size = new System.Drawing.Size(811, 434);
+            this.tableLayoutPanel_logs.TabIndex = 0;
             // 
-            this.ui_Symbols_ButtonX_DeleteList.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ui_Symbols_ButtonX_DeleteList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ui_Symbols_ButtonX_DeleteList.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.ui_Symbols_ButtonX_DeleteList.Location = new System.Drawing.Point(254, 4);
-            this.ui_Symbols_ButtonX_DeleteList.Name = "ui_Symbols_ButtonX_DeleteList";
-            this.ui_Symbols_ButtonX_DeleteList.Size = new System.Drawing.Size(30, 23);
-            this.ui_Symbols_ButtonX_DeleteList.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ui_Symbols_ButtonX_DeleteList.TabIndex = 12;
-            this.ui_Symbols_ButtonX_DeleteList.Text = "-";
-            this.ui_Symbols_ButtonX_DeleteList.Tooltip = "Delete symbol";
-            this.ui_Symbols_ButtonX_DeleteList.Click += new System.EventHandler(this.ui_Symbols_ButtonX_DeleteList_Click);
+            // ui_logs_panelEx_main
             // 
-            // ui_Symbols_ButtonX_EditList
+            this.ui_logs_panelEx_main.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ui_logs_panelEx_main.Controls.Add(this.tableLayoutPanel1);
+            this.ui_logs_panelEx_main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ui_logs_panelEx_main.Location = new System.Drawing.Point(3, 3);
+            this.ui_logs_panelEx_main.Name = "ui_logs_panelEx_main";
+            this.ui_logs_panelEx_main.Size = new System.Drawing.Size(805, 428);
+            this.ui_logs_panelEx_main.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.ui_logs_panelEx_main.Style.BackColor1.Color = System.Drawing.Color.White;
+            this.ui_logs_panelEx_main.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.ui_logs_panelEx_main.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.ui_logs_panelEx_main.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.ui_logs_panelEx_main.Style.GradientAngle = 90;
+            this.ui_logs_panelEx_main.TabIndex = 2;
             // 
-            this.ui_Symbols_ButtonX_EditList.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ui_Symbols_ButtonX_EditList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ui_Symbols_ButtonX_EditList.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.ui_Symbols_ButtonX_EditList.Location = new System.Drawing.Point(218, 4);
-            this.ui_Symbols_ButtonX_EditList.Name = "ui_Symbols_ButtonX_EditList";
-            this.ui_Symbols_ButtonX_EditList.Size = new System.Drawing.Size(30, 23);
-            this.ui_Symbols_ButtonX_EditList.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ui_Symbols_ButtonX_EditList.TabIndex = 11;
-            this.ui_Symbols_ButtonX_EditList.Text = "*";
-            this.ui_Symbols_ButtonX_EditList.Tooltip = "Edit symbol";
-            this.ui_Symbols_ButtonX_EditList.Click += new System.EventHandler(this.ui_Symbols_ButtonX_EditList_Click);
+            // tableLayoutPanel1
             // 
-            // ui_Symbols_ButtonX_AddList
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.panelEx2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelEx3, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.ForeColor = System.Drawing.Color.Black;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(805, 428);
+            this.tableLayoutPanel1.TabIndex = 2;
             // 
-            this.ui_Symbols_ButtonX_AddList.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ui_Symbols_ButtonX_AddList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ui_Symbols_ButtonX_AddList.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.ui_Symbols_ButtonX_AddList.Location = new System.Drawing.Point(182, 4);
-            this.ui_Symbols_ButtonX_AddList.Name = "ui_Symbols_ButtonX_AddList";
-            this.ui_Symbols_ButtonX_AddList.Size = new System.Drawing.Size(30, 23);
-            this.ui_Symbols_ButtonX_AddList.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ui_Symbols_ButtonX_AddList.TabIndex = 10;
-            this.ui_Symbols_ButtonX_AddList.Text = "+";
-            this.ui_Symbols_ButtonX_AddList.Tooltip = "Add new symbol";
-            this.ui_Symbols_ButtonX_AddList.Click += new System.EventHandler(this.ui_Symbols_ButtonX_AddList_Click);
+            // panelEx2
             // 
-            // ui_symbols_listBox_sumbolsLists
+            this.panelEx2.CanvasColor = System.Drawing.SystemColors.Control;
+            this.panelEx2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.panelEx2.Controls.Add(this.ui_logs_buttonX_Find);
+            this.panelEx2.Controls.Add(this.ui_logs_DTime_EndFilter);
+            this.panelEx2.Controls.Add(this.ui_logs_DTime_StartFilter);
+            this.panelEx2.Controls.Add(this.labelX2);
+            this.panelEx2.Controls.Add(this.labelX1);
+            this.panelEx2.Controls.Add(this.ui_logs_labelX_logs);
+            this.panelEx2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEx2.Location = new System.Drawing.Point(3, 3);
+            this.panelEx2.Name = "panelEx2";
+            this.panelEx2.Size = new System.Drawing.Size(799, 74);
+            this.panelEx2.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.panelEx2.Style.BackColor1.Color = System.Drawing.Color.White;
+            this.panelEx2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.panelEx2.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.panelEx2.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.panelEx2.Style.GradientAngle = 90;
+            this.panelEx2.TabIndex = 0;
             // 
-            this.ui_symbols_listBox_sumbolsLists.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ui_symbols_listBox_sumbolsLists.BackColor = System.Drawing.Color.White;
-            this.ui_symbols_listBox_sumbolsLists.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ui_symbols_listBox_sumbolsLists.ForeColor = System.Drawing.Color.Black;
-            this.ui_symbols_listBox_sumbolsLists.FormattingEnabled = true;
-            this.ui_symbols_listBox_sumbolsLists.Location = new System.Drawing.Point(3, 30);
-            this.ui_symbols_listBox_sumbolsLists.Name = "ui_symbols_listBox_sumbolsLists";
-            this.ui_symbols_listBox_sumbolsLists.Size = new System.Drawing.Size(282, 143);
-            this.ui_symbols_listBox_sumbolsLists.TabIndex = 6;
-            this.ui_symbols_listBox_sumbolsLists.SelectedIndexChanged += new System.EventHandler(this.ui_symbols_listBox_sumbolsLists_SelectedIndexChanged);
+            // ui_logs_buttonX_Find
             // 
-            // ui_symbols_labelX_SymbolLists
+            this.ui_logs_buttonX_Find.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ui_logs_buttonX_Find.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ui_logs_buttonX_Find.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ui_logs_buttonX_Find.Location = new System.Drawing.Point(498, 38);
+            this.ui_logs_buttonX_Find.Name = "ui_logs_buttonX_Find";
+            this.ui_logs_buttonX_Find.Size = new System.Drawing.Size(75, 26);
+            this.ui_logs_buttonX_Find.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ui_logs_buttonX_Find.TabIndex = 6;
+            this.ui_logs_buttonX_Find.Text = "Find";
+            this.ui_logs_buttonX_Find.Click += new System.EventHandler(this.ui_logs_buttonX_Find_Click);
+            // 
+            // ui_logs_DTime_EndFilter
             // 
             // 
             // 
             // 
-            this.ui_symbols_labelX_SymbolLists.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ui_symbols_labelX_SymbolLists.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ui_symbols_labelX_SymbolLists.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.ui_symbols_labelX_SymbolLists.ForeColor = System.Drawing.Color.Black;
-            this.ui_symbols_labelX_SymbolLists.Location = new System.Drawing.Point(0, 0);
-            this.ui_symbols_labelX_SymbolLists.Name = "ui_symbols_labelX_SymbolLists";
-            this.ui_symbols_labelX_SymbolLists.PaddingLeft = 6;
-            this.ui_symbols_labelX_SymbolLists.Size = new System.Drawing.Size(288, 23);
-            this.ui_symbols_labelX_SymbolLists.TabIndex = 1;
-            this.ui_symbols_labelX_SymbolLists.Text = "SYMBOL LISTS";
+            this.ui_logs_DTime_EndFilter.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.ui_logs_DTime_EndFilter.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ui_logs_DTime_EndFilter.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.ui_logs_DTime_EndFilter.ButtonDropDown.Visible = true;
+            this.ui_logs_DTime_EndFilter.ForeColor = System.Drawing.Color.Black;
+            this.ui_logs_DTime_EndFilter.IsPopupCalendarOpen = false;
+            this.ui_logs_DTime_EndFilter.Location = new System.Drawing.Point(293, 38);
             // 
-            // ui_symbols_panelEx_symbols
             // 
-            this.ui_symbols_panelEx_symbols.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ui_symbols_panelEx_symbols.Controls.Add(this.ui_Symbols_ButtonX_Delete);
-            this.ui_symbols_panelEx_symbols.Controls.Add(this.ui_Symbols_ButtonX_Edit);
-            this.ui_symbols_panelEx_symbols.Controls.Add(this.ui_Symbols_ButtonX_Add);
-            this.ui_symbols_panelEx_symbols.Controls.Add(this.ui_symbols_listBox_symbols);
-            this.ui_symbols_panelEx_symbols.Controls.Add(this.ui_symbols_labelX_Symbols);
-            this.ui_symbols_panelEx_symbols.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ui_symbols_panelEx_symbols.Location = new System.Drawing.Point(3, 3);
-            this.ui_symbols_panelEx_symbols.Name = "ui_symbols_panelEx_symbols";
-            this.ui_symbols_panelEx_symbols.Size = new System.Drawing.Size(288, 428);
-            this.ui_symbols_panelEx_symbols.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.ui_symbols_panelEx_symbols.Style.BackColor1.Color = System.Drawing.Color.White;
-            this.ui_symbols_panelEx_symbols.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.ui_symbols_panelEx_symbols.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.ui_symbols_panelEx_symbols.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.ui_symbols_panelEx_symbols.Style.GradientAngle = 90;
-            this.ui_symbols_panelEx_symbols.TabIndex = 3;
             // 
-            // ui_Symbols_ButtonX_Delete
+            this.ui_logs_DTime_EndFilter.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
             // 
-            this.ui_Symbols_ButtonX_Delete.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ui_Symbols_ButtonX_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ui_Symbols_ButtonX_Delete.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.ui_Symbols_ButtonX_Delete.Location = new System.Drawing.Point(254, 4);
-            this.ui_Symbols_ButtonX_Delete.Name = "ui_Symbols_ButtonX_Delete";
-            this.ui_Symbols_ButtonX_Delete.Size = new System.Drawing.Size(30, 23);
-            this.ui_Symbols_ButtonX_Delete.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ui_Symbols_ButtonX_Delete.TabIndex = 9;
-            this.ui_Symbols_ButtonX_Delete.Text = "-";
-            this.ui_Symbols_ButtonX_Delete.Tooltip = "Delete symbol";
-            this.ui_Symbols_ButtonX_Delete.Click += new System.EventHandler(this.ui_Symbols_ButtonX_Delete_Click);
             // 
-            // ui_Symbols_ButtonX_Edit
             // 
-            this.ui_Symbols_ButtonX_Edit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ui_Symbols_ButtonX_Edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ui_Symbols_ButtonX_Edit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.ui_Symbols_ButtonX_Edit.Location = new System.Drawing.Point(218, 4);
-            this.ui_Symbols_ButtonX_Edit.Name = "ui_Symbols_ButtonX_Edit";
-            this.ui_Symbols_ButtonX_Edit.Size = new System.Drawing.Size(30, 23);
-            this.ui_Symbols_ButtonX_Edit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ui_Symbols_ButtonX_Edit.TabIndex = 8;
-            this.ui_Symbols_ButtonX_Edit.Text = "*";
-            this.ui_Symbols_ButtonX_Edit.Tooltip = "Edit symbol";
-            this.ui_Symbols_ButtonX_Edit.Click += new System.EventHandler(this.ui_Symbols_ButtonX_Edit_Click);
+            this.ui_logs_DTime_EndFilter.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ui_logs_DTime_EndFilter.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
+            this.ui_logs_DTime_EndFilter.MonthCalendar.ClearButtonVisible = true;
             // 
-            // ui_Symbols_ButtonX_Add
             // 
-            this.ui_Symbols_ButtonX_Add.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ui_Symbols_ButtonX_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ui_Symbols_ButtonX_Add.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.ui_Symbols_ButtonX_Add.Location = new System.Drawing.Point(182, 4);
-            this.ui_Symbols_ButtonX_Add.Name = "ui_Symbols_ButtonX_Add";
-            this.ui_Symbols_ButtonX_Add.Size = new System.Drawing.Size(30, 23);
-            this.ui_Symbols_ButtonX_Add.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ui_Symbols_ButtonX_Add.TabIndex = 7;
-            this.ui_Symbols_ButtonX_Add.Text = "+";
-            this.ui_Symbols_ButtonX_Add.Tooltip = "Add new symbol";
-            this.ui_Symbols_ButtonX_Add.Click += new System.EventHandler(this.ui_Symbols_ButtonX_Add_Click);
             // 
-            // ui_symbols_listBox_symbols
+            this.ui_logs_DTime_EndFilter.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.ui_logs_DTime_EndFilter.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.ui_logs_DTime_EndFilter.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.ui_logs_DTime_EndFilter.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.ui_logs_DTime_EndFilter.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.ui_logs_DTime_EndFilter.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.ui_logs_DTime_EndFilter.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ui_logs_DTime_EndFilter.MonthCalendar.DisplayMonth = new System.DateTime(2013, 7, 1, 0, 0, 0, 0);
+            this.ui_logs_DTime_EndFilter.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
+            this.ui_logs_DTime_EndFilter.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.ui_logs_DTime_EndFilter.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
             // 
-            this.ui_symbols_listBox_symbols.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ui_symbols_listBox_symbols.BackColor = System.Drawing.Color.White;
-            this.ui_symbols_listBox_symbols.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ui_symbols_listBox_symbols.ForeColor = System.Drawing.Color.Black;
-            this.ui_symbols_listBox_symbols.FormattingEnabled = true;
-            this.ui_symbols_listBox_symbols.Location = new System.Drawing.Point(3, 30);
-            this.ui_symbols_listBox_symbols.Name = "ui_symbols_listBox_symbols";
-            this.ui_symbols_listBox_symbols.Size = new System.Drawing.Size(282, 143);
-            this.ui_symbols_listBox_symbols.TabIndex = 6;
             // 
-            // ui_symbols_labelX_Symbols
+            // 
+            this.ui_logs_DTime_EndFilter.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.ui_logs_DTime_EndFilter.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.ui_logs_DTime_EndFilter.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.ui_logs_DTime_EndFilter.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ui_logs_DTime_EndFilter.MonthCalendar.TodayButtonVisible = true;
+            this.ui_logs_DTime_EndFilter.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.ui_logs_DTime_EndFilter.Name = "ui_logs_DTime_EndFilter";
+            this.ui_logs_DTime_EndFilter.Size = new System.Drawing.Size(167, 26);
+            this.ui_logs_DTime_EndFilter.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ui_logs_DTime_EndFilter.TabIndex = 5;
+            this.ui_logs_DTime_EndFilter.Value = new System.DateTime(2013, 7, 29, 0, 0, 0, 0);
+            // 
+            // ui_logs_DTime_StartFilter
             // 
             // 
             // 
             // 
-            this.ui_symbols_labelX_Symbols.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ui_symbols_labelX_Symbols.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ui_symbols_labelX_Symbols.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.ui_symbols_labelX_Symbols.ForeColor = System.Drawing.Color.Black;
-            this.ui_symbols_labelX_Symbols.Location = new System.Drawing.Point(0, 0);
-            this.ui_symbols_labelX_Symbols.Name = "ui_symbols_labelX_Symbols";
-            this.ui_symbols_labelX_Symbols.PaddingLeft = 6;
-            this.ui_symbols_labelX_Symbols.Size = new System.Drawing.Size(288, 23);
-            this.ui_symbols_labelX_Symbols.TabIndex = 1;
-            this.ui_symbols_labelX_Symbols.Text = "SYMBOLS";
+            this.ui_logs_DTime_StartFilter.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.ui_logs_DTime_StartFilter.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ui_logs_DTime_StartFilter.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.ui_logs_DTime_StartFilter.ButtonDropDown.Visible = true;
+            this.ui_logs_DTime_StartFilter.ForeColor = System.Drawing.Color.Black;
+            this.ui_logs_DTime_StartFilter.IsPopupCalendarOpen = false;
+            this.ui_logs_DTime_StartFilter.Location = new System.Drawing.Point(57, 38);
             // 
-            // panelEx1
             // 
-            this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.panelEx1.Controls.Add(this.buttonX1);
-            this.panelEx1.Controls.Add(this.ui_symbols_comboBox_NotAllowedUsers);
-            this.panelEx1.Controls.Add(this.ui_symbols_dgrid_AllowedUsers);
-            this.panelEx1.Controls.Add(this.ui_symbols_labelX_SListDetails);
-            this.panelEx1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelEx1.Location = new System.Drawing.Point(591, 3);
-            this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(217, 428);
-            this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.panelEx1.Style.BackColor1.Color = System.Drawing.Color.White;
-            this.panelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.panelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.panelEx1.Style.GradientAngle = 90;
-            this.panelEx1.TabIndex = 5;
             // 
-            // buttonX1
+            this.ui_logs_DTime_StartFilter.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
             // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Location = new System.Drawing.Point(36, 73);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(144, 27);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 5;
-            this.buttonX1.Text = "Allow user current list";
-            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
             // 
-            // ui_symbols_comboBox_NotAllowedUsers
             // 
-            this.ui_symbols_comboBox_NotAllowedUsers.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ui_symbols_comboBox_NotAllowedUsers.DisplayMember = "Text";
-            this.ui_symbols_comboBox_NotAllowedUsers.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ui_symbols_comboBox_NotAllowedUsers.ForeColor = System.Drawing.Color.Black;
-            this.ui_symbols_comboBox_NotAllowedUsers.FormattingEnabled = true;
-            this.ui_symbols_comboBox_NotAllowedUsers.ItemHeight = 16;
-            this.ui_symbols_comboBox_NotAllowedUsers.Location = new System.Drawing.Point(26, 38);
-            this.ui_symbols_comboBox_NotAllowedUsers.Name = "ui_symbols_comboBox_NotAllowedUsers";
-            this.ui_symbols_comboBox_NotAllowedUsers.Size = new System.Drawing.Size(168, 22);
-            this.ui_symbols_comboBox_NotAllowedUsers.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ui_symbols_comboBox_NotAllowedUsers.TabIndex = 4;
+            this.ui_logs_DTime_StartFilter.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ui_logs_DTime_StartFilter.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
+            this.ui_logs_DTime_StartFilter.MonthCalendar.ClearButtonVisible = true;
             // 
-            // ui_symbols_dgrid_AllowedUsers
             // 
-            this.ui_symbols_dgrid_AllowedUsers.AllowUserToAddRows = false;
-            this.ui_symbols_dgrid_AllowedUsers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ui_symbols_dgrid_AllowedUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.ui_symbols_dgrid_AllowedUsers.BackgroundColor = System.Drawing.Color.White;
-            this.ui_symbols_dgrid_AllowedUsers.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ui_symbols_dgrid_AllowedUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.ui_symbols_dgrid_AllowedUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ui_symbols_dgrid_AllowedUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ui_dGridCol_allowedUserLogin,
-            this.ui_dGridCol_allowedUserName,
-            this.ui_dGridCol_delete});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ui_symbols_dgrid_AllowedUsers.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ui_symbols_dgrid_AllowedUsers.EnableHeadersVisualStyles = false;
-            this.ui_symbols_dgrid_AllowedUsers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.ui_symbols_dgrid_AllowedUsers.Location = new System.Drawing.Point(1, 109);
-            this.ui_symbols_dgrid_AllowedUsers.Name = "ui_symbols_dgrid_AllowedUsers";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ui_symbols_dgrid_AllowedUsers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.ui_symbols_dgrid_AllowedUsers.RowHeadersVisible = false;
-            this.ui_symbols_dgrid_AllowedUsers.RowTemplate.Height = 24;
-            this.ui_symbols_dgrid_AllowedUsers.Size = new System.Drawing.Size(215, 311);
-            this.ui_symbols_dgrid_AllowedUsers.TabIndex = 3;
-            this.ui_symbols_dgrid_AllowedUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ui_symbols_dgrid_AllowedUsers_CellClick);
             // 
-            // ui_dGridCol_allowedUserLogin
+            this.ui_logs_DTime_StartFilter.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.ui_logs_DTime_StartFilter.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.ui_logs_DTime_StartFilter.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.ui_logs_DTime_StartFilter.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.ui_logs_DTime_StartFilter.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.ui_logs_DTime_StartFilter.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.ui_logs_DTime_StartFilter.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ui_logs_DTime_StartFilter.MonthCalendar.DisplayMonth = new System.DateTime(2013, 7, 1, 0, 0, 0, 0);
+            this.ui_logs_DTime_StartFilter.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
+            this.ui_logs_DTime_StartFilter.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.ui_logs_DTime_StartFilter.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
             // 
-            this.ui_dGridCol_allowedUserLogin.FillWeight = 71F;
-            this.ui_dGridCol_allowedUserLogin.HeaderText = "Login";
-            this.ui_dGridCol_allowedUserLogin.Name = "ui_dGridCol_allowedUserLogin";
-            this.ui_dGridCol_allowedUserLogin.ReadOnly = true;
             // 
-            // ui_dGridCol_allowedUserName
             // 
-            this.ui_dGridCol_allowedUserName.FillWeight = 72F;
-            this.ui_dGridCol_allowedUserName.HeaderText = "Name";
-            this.ui_dGridCol_allowedUserName.Name = "ui_dGridCol_allowedUserName";
-            this.ui_dGridCol_allowedUserName.ReadOnly = true;
+            this.ui_logs_DTime_StartFilter.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.ui_logs_DTime_StartFilter.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.ui_logs_DTime_StartFilter.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.ui_logs_DTime_StartFilter.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ui_logs_DTime_StartFilter.MonthCalendar.TodayButtonVisible = true;
+            this.ui_logs_DTime_StartFilter.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.ui_logs_DTime_StartFilter.Name = "ui_logs_DTime_StartFilter";
+            this.ui_logs_DTime_StartFilter.Size = new System.Drawing.Size(167, 26);
+            this.ui_logs_DTime_StartFilter.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ui_logs_DTime_StartFilter.TabIndex = 4;
+            this.ui_logs_DTime_StartFilter.Value = new System.DateTime(2013, 7, 28, 0, 0, 0, 0);
             // 
-            // ui_dGridCol_delete
-            // 
-            this.ui_dGridCol_delete.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.ui_dGridCol_delete.FillWeight = 30F;
-            this.ui_dGridCol_delete.HeaderText = "";
-            this.ui_dGridCol_delete.Name = "ui_dGridCol_delete";
-            this.ui_dGridCol_delete.ReadOnly = true;
-            this.ui_dGridCol_delete.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-            this.ui_dGridCol_delete.Text = "X";
-            // 
-            // ui_symbols_labelX_SListDetails
+            // labelX2
             // 
             // 
             // 
             // 
-            this.ui_symbols_labelX_SListDetails.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ui_symbols_labelX_SListDetails.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ui_symbols_labelX_SListDetails.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.ui_symbols_labelX_SListDetails.ForeColor = System.Drawing.Color.Black;
-            this.ui_symbols_labelX_SListDetails.Location = new System.Drawing.Point(0, 0);
-            this.ui_symbols_labelX_SListDetails.Name = "ui_symbols_labelX_SListDetails";
-            this.ui_symbols_labelX_SListDetails.PaddingLeft = 6;
-            this.ui_symbols_labelX_SListDetails.Size = new System.Drawing.Size(217, 23);
-            this.ui_symbols_labelX_SListDetails.TabIndex = 2;
-            this.ui_symbols_labelX_SListDetails.Text = "ALLOWED USERS ";
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelX2.ForeColor = System.Drawing.Color.Black;
+            this.labelX2.Location = new System.Drawing.Point(253, 34);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(34, 23);
+            this.labelX2.TabIndex = 3;
+            this.labelX2.Text = "End";
+            this.labelX2.TextAlignment = System.Drawing.StringAlignment.Far;
+            this.labelX2.TextLineAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX1
+            // 
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelX1.ForeColor = System.Drawing.Color.Black;
+            this.labelX1.Location = new System.Drawing.Point(10, 38);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(35, 23);
+            this.labelX1.TabIndex = 2;
+            this.labelX1.Text = "Start";
+            this.labelX1.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // ui_logs_labelX_logs
+            // 
+            // 
+            // 
+            // 
+            this.ui_logs_labelX_logs.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ui_logs_labelX_logs.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ui_logs_labelX_logs.ForeColor = System.Drawing.Color.Black;
+            this.ui_logs_labelX_logs.Location = new System.Drawing.Point(0, 0);
+            this.ui_logs_labelX_logs.Name = "ui_logs_labelX_logs";
+            this.ui_logs_labelX_logs.PaddingLeft = 6;
+            this.ui_logs_labelX_logs.Size = new System.Drawing.Size(805, 23);
+            this.ui_logs_labelX_logs.TabIndex = 1;
+            this.ui_logs_labelX_logs.Text = "LOGS";
+            // 
+            // panelEx3
+            // 
+            this.panelEx3.CanvasColor = System.Drawing.SystemColors.Control;
+            this.panelEx3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.panelEx3.Controls.Add(this.ui_logs_dGridX_Logs);
+            this.panelEx3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEx3.Location = new System.Drawing.Point(3, 83);
+            this.panelEx3.Name = "panelEx3";
+            this.panelEx3.Size = new System.Drawing.Size(799, 342);
+            this.panelEx3.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.panelEx3.Style.BackColor1.Color = System.Drawing.Color.White;
+            this.panelEx3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.panelEx3.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.panelEx3.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.panelEx3.Style.GradientAngle = 90;
+            this.panelEx3.TabIndex = 1;
+            // 
+            // ui_logs_dGridX_Logs
+            // 
+            this.ui_logs_dGridX_Logs.AllowUserToAddRows = false;
+            this.ui_logs_dGridX_Logs.AllowUserToDeleteRows = false;
+            this.ui_logs_dGridX_Logs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ui_logs_dGridX_Logs.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ui_logs_dGridX_Logs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.ui_logs_dGridX_Logs.ColumnHeadersHeight = 30;
+            this.ui_logs_dGridX_Logs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.ui_logs_dGridX_Logs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ui_logColumn_Date,
+            this.ui_logColumn_UserLogin,
+            this.ui_logColumn_MsgType,
+            this.ui_logColumn_Symbol,
+            this.ui_logColumn_group,
+            this.ui_logColumn_Description,
+            this.ui_logColumn_Status});
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ui_logs_dGridX_Logs.DefaultCellStyle = dataGridViewCellStyle8;
+            this.ui_logs_dGridX_Logs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ui_logs_dGridX_Logs.EnableHeadersVisualStyles = false;
+            this.ui_logs_dGridX_Logs.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.ui_logs_dGridX_Logs.Location = new System.Drawing.Point(0, 0);
+            this.ui_logs_dGridX_Logs.Name = "ui_logs_dGridX_Logs";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ui_logs_dGridX_Logs.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.ui_logs_dGridX_Logs.RowHeadersVisible = false;
+            this.ui_logs_dGridX_Logs.RowTemplate.Height = 24;
+            this.ui_logs_dGridX_Logs.Size = new System.Drawing.Size(799, 342);
+            this.ui_logs_dGridX_Logs.TabIndex = 0;
+            // 
+            // ui_logColumn_Date
+            // 
+            this.ui_logColumn_Date.FillWeight = 50F;
+            this.ui_logColumn_Date.HeaderText = "Date";
+            this.ui_logColumn_Date.Name = "ui_logColumn_Date";
+            this.ui_logColumn_Date.ReadOnly = true;
+            this.ui_logColumn_Date.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // ui_logColumn_UserLogin
+            // 
+            this.ui_logColumn_UserLogin.FillWeight = 63.89933F;
+            this.ui_logColumn_UserLogin.HeaderText = "User";
+            this.ui_logColumn_UserLogin.Name = "ui_logColumn_UserLogin";
+            this.ui_logColumn_UserLogin.ReadOnly = true;
+            // 
+            // ui_logColumn_MsgType
+            // 
+            this.ui_logColumn_MsgType.FillWeight = 63.89933F;
+            this.ui_logColumn_MsgType.HeaderText = "Event";
+            this.ui_logColumn_MsgType.Name = "ui_logColumn_MsgType";
+            this.ui_logColumn_MsgType.ReadOnly = true;
+            // 
+            // ui_logColumn_Symbol
+            // 
+            this.ui_logColumn_Symbol.FillWeight = 79.87417F;
+            this.ui_logColumn_Symbol.HeaderText = "Symbol";
+            this.ui_logColumn_Symbol.Name = "ui_logColumn_Symbol";
+            this.ui_logColumn_Symbol.ReadOnly = true;
+            // 
+            // ui_logColumn_group
+            // 
+            this.ui_logColumn_group.FillWeight = 79.87417F;
+            this.ui_logColumn_group.HeaderText = "Group";
+            this.ui_logColumn_group.Name = "ui_logColumn_group";
+            this.ui_logColumn_group.ReadOnly = true;
+            // 
+            // ui_logColumn_Description
+            // 
+            this.ui_logColumn_Description.FillWeight = 199.6854F;
+            this.ui_logColumn_Description.HeaderText = "Description";
+            this.ui_logColumn_Description.Name = "ui_logColumn_Description";
+            this.ui_logColumn_Description.ReadOnly = true;
+            // 
+            // ui_logColumn_Status
+            // 
+            this.ui_logColumn_Status.FillWeight = 40F;
+            this.ui_logColumn_Status.HeaderText = "Status";
+            this.ui_logColumn_Status.Name = "ui_logColumn_Status";
+            this.ui_logColumn_Status.ReadOnly = true;
             // 
             // metroTabItem_home
             // 
@@ -1486,25 +1492,25 @@
             this.dataAdminToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.contextMenuStripNotify.Name = "contextMenuStripNotify";
-            this.contextMenuStripNotify.Size = new System.Drawing.Size(138, 48);
+            this.contextMenuStripNotify.Size = new System.Drawing.Size(159, 52);
             // 
             // dataAdminToolStripMenuItem
             // 
             this.dataAdminToolStripMenuItem.Name = "dataAdminToolStripMenuItem";
-            this.dataAdminToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.dataAdminToolStripMenuItem.Size = new System.Drawing.Size(158, 24);
             this.dataAdminToolStripMenuItem.Text = "Data Admin";
             this.dataAdminToolStripMenuItem.Click += new System.EventHandler(this.notifyIcon1_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(158, 24);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.StartControl_ExitClick);
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 509);
             this.Controls.Add(this.metroStatusBar1);
@@ -1520,15 +1526,12 @@
             this.Shown += new System.EventHandler(this.FormMain_Shown);
             this.metroShellMain.ResumeLayout(false);
             this.metroShellMain.PerformLayout();
-            this.metroTabPanel_logs.ResumeLayout(false);
-            this.tableLayoutPanel_logs.ResumeLayout(false);
-            this.ui_logs_panelEx_main.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.panelEx2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ui_logs_DTime_EndFilter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ui_logs_DTime_StartFilter)).EndInit();
-            this.panelEx3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ui_logs_dGridX_Logs)).EndInit();
+            this.metroTabPanel_symbols.ResumeLayout(false);
+            this.tableLayoutPanel_symbols.ResumeLayout(false);
+            this.ui_symbols_panelEx_symbolsLists.ResumeLayout(false);
+            this.ui_symbols_panelEx_symbols.ResumeLayout(false);
+            this.panelEx1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ui_symbols_dgrid_AllowedUsers)).EndInit();
             this.metroTabPanelUsers.ResumeLayout(false);
             this.tableLayoutPanel_users.ResumeLayout(false);
             this.ui_users_panelEx_details.ResumeLayout(false);
@@ -1540,12 +1543,15 @@
             this.ui_home_panelEx3.ResumeLayout(false);
             this.ui_home_panelEx2.ResumeLayout(false);
             this.ui_home_panelEx1.ResumeLayout(false);
-            this.metroTabPanel_symbols.ResumeLayout(false);
-            this.tableLayoutPanel_symbols.ResumeLayout(false);
-            this.ui_symbols_panelEx_symbolsLists.ResumeLayout(false);
-            this.ui_symbols_panelEx_symbols.ResumeLayout(false);
-            this.panelEx1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ui_symbols_dgrid_AllowedUsers)).EndInit();
+            this.metroTabPanel_logs.ResumeLayout(false);
+            this.tableLayoutPanel_logs.ResumeLayout(false);
+            this.ui_logs_panelEx_main.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panelEx2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ui_logs_DTime_EndFilter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ui_logs_DTime_StartFilter)).EndInit();
+            this.panelEx3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ui_logs_dGridX_Logs)).EndInit();
             this.contextMenuStripNotify.ResumeLayout(false);
             this.ResumeLayout(false);
 
