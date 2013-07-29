@@ -22,7 +22,14 @@ namespace DataAdmin.DataAdminServices
 
         public readonly ThreadSafeSortedList<long, DataClient> _clients;
         public delegate void RaiseClientListChange();
+
+        public delegate void RaiseClientFailedLoginLog(MessageFactory.LogMessage msg,string msgMain);
+
+        public delegate void RaiseClientLoggedIn(MessageFactory.LogMessage msg,string msgMain);
+        public event RaiseClientFailedLoginLog loginFailedLog;
+        public event RaiseClientLoggedIn loggedInLog;
         public event RaiseClientListChange listChanged;
+        
         
 
 
@@ -49,6 +56,8 @@ namespace DataAdmin.DataAdminServices
             var psw = loginParams.PasswordMD5;
             var tempUser = new UserModel();
             string serverMessage = "";
+            string msgfail = "";
+
          var  _users = DataManager.GetUsers();
        if (_users.Exists(a => a.Name == usr))// if user in DB
        {        tempUser = _users.Find(a => a.Name == usr);
@@ -89,29 +98,59 @@ namespace DataAdmin.DataAdminServices
                             clientInList.IsDatanetConnected = true;
                         return;
                     }
+                    if (loginParams.NetType == 'd' && tempUser.AllowDataNet == false)
+                    {
+                        serverMessage = "YOUR DATANET CLIENT BLOCKED BY ADMIN";
+                       
+                            msgfail = "Client trying to connect from " + CurrentClient.RemoteEndPoint + " but his client blocked by Admin.";
+                           
+
+                    }
+                    if (loginParams.NetType == 't' && tempUser.AllowTickNet == false)
+                    {
+                        serverMessage = "YOUR TICKNET CLIENT BLOCKED BY ADMIN";
+                       
+                       msgfail = DateTime.Now.Date.ToShortDateString()+ ": Client trying to connect from " + CurrentClient.RemoteEndPoint + " but  his client blocked by Admin.";
+                }
+
                 }
                 else
                 {
                     serverMessage = "YOUR IP ADDRESS IS NOT ALLOWED"; 
+                 
+                      msgfail =DateTime.Now.Date.ToShortDateString()+ ": Client trying connect to server from "+CurrentClient.RemoteEndPoint+" but the IP adress is blocked by Admin.";
+                      
+                        
+                    
                 }
            }
             else
             {
-                serverMessage = "PLS ENTER A CORRECT PASSWORD"; 
+                serverMessage = "ENTER A CORRECT PASSWORD"; 
             }
        }
        else
        {
-           serverMessage = "YOU USERNAME IS INCORRECT";
+           serverMessage = "YOUR USERNAME IS INCORRECT";
        }
 
-       var client = CurrentClient;
+       if (loginFailedLog != null)
+       {
+           var msg = new MessageFactory.LogMessage();
+           msg.OperationStatus = MessageFactory.LogMessage.Status.Failed;
+           msg.LogType = MessageFactory.LogMessage.Log.Login;
+           msg.Time = DateTime.Now.Date;
+           
+           loginFailedLog(new MessageFactory.LogMessage(),msgfail);
+       }
+            var client = CurrentClient;
 
        //Get a proxy object to call methods of client when needed
        var clientProxy = client.GetClientProxy<IDataAdminService>();
-            var loginFailed = new MessageFactory.LoginMessage("", "", 'd');
-            loginFailed.ServerMessage = serverMessage;
+            var loginFailed = new MessageFactory.LoginMessage("", "", 'd') {ServerMessage = serverMessage};
             clientProxy.Login(loginFailed);
+
+
       
 
         }
@@ -136,8 +175,20 @@ public void AddClient(IScsServiceClient newClient,char listflag,UserModel usrMod
     //Register to Disconnected event to know when user connection is closed
     client.Disconnected += Client_Disconnected;
     //Start a new task to send user list to mainform
-  
-   OnClientLogon(usrModel);
+
+    if (loggedInLog != null)
+    {
+        var msg = new MessageFactory.LogMessage();
+        msg.OperationStatus = MessageFactory.LogMessage.Status.Finished;
+        msg.LogType = MessageFactory.LogMessage.Log.Login;
+        msg.Time = DateTime.Now.Date;
+        msg.UserID = usrModel.Id;
+        var msgMain = "Client " + usrModel.Name + " connected from " + usrModel.IpAdress;
+        loggedInLog(msg,msgMain);
+    }
+      
+
+     OnClientLogon(usrModel);
     Task.Factory.StartNew(OnUserListChanged
                   );
 }
@@ -224,7 +275,7 @@ public void onLogon(bool logged, MessageFactory.ChangePrivilage getprivilages)
                                         "user  " + name);
      }
 
-  receiverClient.ClientProxy.Logout();
+  receiverClient.ClientProxy.DeletedByAdmin();
  }
         public void Logout()
         {
@@ -284,16 +335,7 @@ public void onLogon(bool logged, MessageFactory.ChangePrivilage getprivilages)
             var dclient = _clients.GetAllItems().Find(a => a.UserName == username);
             //var symblist = DataManager.GetGroupsForUser(dclient.DBId);
             var xEle =   new XElement("UserID", new XAttribute("ID",FindClientByUserName(username).DBId));
-            //                        from emp in symblist
-            //                        select new XElement("GroupSymb",
-            //                                            new XAttribute("ID", emp.GroupId),
-            //                                            new XAttribute("Gname", emp.GroupName),
-            //                                            new XAttribute("Tframe", emp.TimeFrame)
-                       
-            //             ));
-
-         
-
+          
             StringWriter sw = new StringWriter();
             XmlTextWriter tx = new XmlTextWriter(sw);
             xEle.WriteTo(tx);
@@ -319,15 +361,58 @@ public void onLogon(bool logged, MessageFactory.ChangePrivilage getprivilages)
             throw new NotImplementedException();
         }
 
-        public void onSymbolListRecieved(object symbolList)
+        public void SymbolListChanged()
         {
-           // throw new NotImplementedException();
+            foreach (var client in _clients.GetAllItems())
+            {
+                client.ClientProxy.onSymbolListRecieved("");
+            }
         }
 
-        public void onSymbolGroupListRecieved(object symbolGroupList)
+        public void onSymbolListRecieved(string symbolList)
         {
-           // throw new NotImplementedException();
+            throw new NotImplementedException();
         }
+
+
+        public void GroupChanged()
+        {
+            foreach (var client in _clients.GetAllItems())
+            {
+                client.ClientProxy.onSymbolGroupListRecieved("");
+            }
+        }
+        public void onSymbolGroupListRecieved(string symbolGroupList)
+        {
+            
+        }
+
+        public void DeletedByAdmin()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SendConnectionString(string connectionString)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SendMessagageToClient(string message)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SendMessageToServer(string message)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Ping()
+        {
+            throw new NotImplementedException();
+        }
+
+     
         #endregion
 
 
