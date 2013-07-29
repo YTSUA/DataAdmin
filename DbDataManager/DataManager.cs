@@ -149,6 +149,65 @@ namespace DataAdmin.DbDataManager
             return DoSql(query);
         }
 
+        public static List<LogModel> GetLogs()
+        {
+            var resultList = new List<LogModel>();
+
+            string sql = "SELECT * FROM " + TblLogs + ";";
+            var reader = GetReader(sql);
+            if (reader != null)
+            {
+                while (reader.Read())
+                {
+                    var log = new LogModel
+                    {
+                        LogId = reader.GetInt32(0),
+                        UserId = reader.GetInt32(1),
+                        Date = reader.GetDateTime(2),
+                        Symbol = reader.GetString(3),
+                        MsgType = reader.GetInt32(4),
+                        Group = reader.GetString(5),
+                        Status = reader.GetInt32(6)
+                    };
+
+                    resultList.Add(log);
+                }
+
+                reader.Close();
+            }
+            return resultList;
+        }
+
+        public static List<LogModel> GetLogBetweenDates(DateTime startDate, DateTime endDate)
+        {
+            string dateStart = Convert.ToDateTime(startDate).ToString("yyyy/MM/dd HH:mm:ss", CultureInfo.InvariantCulture);
+            string dateEnd = Convert.ToDateTime(endDate).ToString("yyyy/MM/dd HH:mm:ss", CultureInfo.InvariantCulture);
+
+            var resultList = new List<LogModel>();
+
+            string sql = "SELECT * FROM " + TblLogs + " WHERE Date BETWEEN '" + dateStart + "' AND '" + dateEnd + "';";
+            var reader = GetReader(sql);
+            if (reader != null)
+            {
+                while (reader.Read())
+                {
+                    var log = new LogModel();
+                    log.LogId = reader.GetInt32(0);
+                    log.UserId = reader.GetInt32(1);
+                    log.Date = reader.GetDateTime(2);
+                    log.MsgType = reader.GetInt32(3);
+                    log.Symbol = reader.GetString(4);
+                    log.Group = reader.GetString(5);
+                    log.Status = reader.GetInt32(6);
+
+                    resultList.Add(log);
+                }
+
+                reader.Close();
+            }
+            return resultList;
+        }
+
         #endregion
 
 

@@ -29,6 +29,7 @@ namespace DataAdmin.Forms
         private List<UserModel> _users = new List<UserModel>();
         private List<SymbolModel> _symbols =  new List<SymbolModel>();
         private List<GroupModel> _groups = new List<GroupModel>(); 
+        private List<LogModel> _logs = new List<LogModel>(); 
 
         #region Basic function (Constructor, Load, Show, Closing, Resize, Notify)
 
@@ -154,6 +155,7 @@ namespace DataAdmin.Forms
         private DataAdminService _adminservice;
         private IScsServiceApplication _server;
         #endregion
+
         #region UI Code
 
         #region UI + SERVER
@@ -231,6 +233,8 @@ namespace DataAdmin.Forms
 
 
         #endregion
+
+
         #region JUST UI
         private void StartControl_ExitClick(object sender, EventArgs e)
         {
@@ -264,6 +268,7 @@ namespace DataAdmin.Forms
             UpdateSymbolsTable();
             UpdateUsersTable();
             UpdateGroupsTable();
+            UpdateLogsTable();
 
             //TODO: UPDATE ALL OTHER TABLES
         }
@@ -295,6 +300,20 @@ namespace DataAdmin.Forms
             foreach (var group in _groups)
             {
                 ui_symbols_listBox_sumbolsLists.Items.Add(group.GroupName);
+            }
+        }
+
+        private void UpdateLogsTable()
+        {
+            _logs = DataManager.GetLogBetweenDates(DateTime.Now.AddDays(-2), DateTime.Now);
+            ui_logs_DTime_StartFilter.Value = DateTime.Now.AddDays(-2);
+            ui_logs_DTime_EndFilter.Value = DateTime.Now;
+
+            ui_logs_dGridX_Logs.Rows.Clear();
+            foreach (var log in _logs)
+            {
+                var userName = _users.Find(a => a.Id == log.UserId).Name;
+                ui_logs_dGridX_Logs.Rows.Add(log.Date, userName, log.MsgType, log.Symbol, log.Group, "", log.Status);
             }
         }
 
@@ -346,6 +365,7 @@ namespace DataAdmin.Forms
         }
 
         #endregion
+
         #endregion
 
         #region MAIN
@@ -830,6 +850,8 @@ namespace DataAdmin.Forms
         }
         #endregion
 
+
+        #region SYMBOL DETAILS
         private void ui_symbols_listBox_sumbolsLists_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(ui_symbols_listBox_sumbolsLists.SelectedItems.Count == 0) return;
@@ -915,10 +937,27 @@ namespace DataAdmin.Forms
             ui_users_dgridX_users_SelectionChanged(sender, e);
         }
 
-        private void metroTabPanel_symbols_Click(object sender, EventArgs e)
+        private void ui_logs_buttonX_Find_Click(object sender, EventArgs e)
         {
+            var dateStart = ui_logs_DTime_StartFilter.Value;
+            var dateEnd = ui_logs_DTime_EndFilter.Value;
 
+            var logs = DataManager.GetLogBetweenDates(dateStart, dateEnd);
+            if (logs.Count > 0)
+            {
+                ui_logs_dGridX_Logs.Rows.Clear();
+                foreach (var log in logs)
+                {
+                    var userName = _users.Find(a => a.Id == log.UserId).Name;
+                    ui_logs_dGridX_Logs.Rows.Add(log.Date, userName, log.MsgType, log.Symbol, log.Group, "", log.Status);
+                }
+            }
+            else
+            {
+                ToastNotification.Show(ui_logs_dGridX_Logs, @"There are no logs for these dates.");
+            }
         }
+        #endregion
 
 
         #region LOGS
